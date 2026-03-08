@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "AQR-HNSW: Accelerating Approximate Nearest Neighbor Search via Density-aware Quantization and Multi-stage Re-ranking",
+      "authors": "Tewary et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Approximate Nearest Neighbor (ANN) search has become fundamental to modern AI infrastructure, powering recommendation systems, search engines, and large language models across indu",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "tewary2026_aqr",
+      "id": "arxiv:2602.21600v1",
+      "arxiv_id": "2602.21600v1",
+      "open_access_url": "https://arxiv.org/pdf/2602.21600v1"
+    },
+    {
+      "index": 2,
+      "title": "Reveal Hidden Pitfalls and Navigate Next Generation of Vector Similarity Search from Task-Centric Views",
+      "authors": "Chen et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Vector Similarity Search (VSS) in high-dimensional spaces is rapidly emerging as core functionality in next-generation database systems for numerous data-intensive services -- from",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "chen2025_reveal",
+      "id": "arxiv:2512.12980v2",
+      "arxiv_id": "2512.12980v2",
+      "open_access_url": "https://arxiv.org/pdf/2512.12980v2"
+    }
+  ],
+  "push_sequence": 3
+}
