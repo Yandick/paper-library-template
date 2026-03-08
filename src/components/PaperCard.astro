@@ -21,7 +21,7 @@ interface Props {
   sourceUrl?: string;
   sourceLabel?: string;
   abstractEn?: string;
-  abstractZh?: string;
+  pushSequence?: number;
   isNews?: boolean;
 }
 
@@ -30,7 +30,7 @@ import { getTagColorClass } from '../lib/categorize';
 const {
   index, title, authors, journal, year, casZone, impactFactor, citations,
   tldr, relevanceNote, background, method, results, innovation,
-  inspiration, doi, topicTags, categoryTags, sourceUrl, sourceLabel, abstractEn, abstractZh, isNews
+  inspiration, doi, topicTags, categoryTags, sourceUrl, sourceLabel, abstractEn, pushSequence, isNews
 } = Astro.props;
 
 function getTagClass(tag: string) {
@@ -65,6 +65,11 @@ const displayZone = formatZone(casZone);
           {tag}
         </span>
       ))}
+      {pushSequence && (
+        <span class="text-xs px-2 py-0.5 rounded-full font-medium bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary">
+          第{pushSequence}轮
+        </span>
+      )}
       {isNews && <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 dark:bg-red-500/20 dark:text-red-300 font-medium">🔥 HOT</span>}
     </div>
 
@@ -117,58 +122,22 @@ const displayZone = formatZone(casZone);
   </div>
 
   <!-- Expandable details -->
-  <details class="border-t border-gray-100 dark:border-white/5">
-    <summary class="px-6 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer transition flex items-center gap-2">
-      <svg class="w-4 h-4 transition-transform details-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-      </svg>
-      展开详细解读
-    </summary>
-    <div class="px-6 pb-6 space-y-4 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-      {abstractZh && (
+  {abstractEn && (
+    <details class="border-t border-gray-100 dark:border-white/5">
+      <summary class="px-6 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer transition flex items-center gap-2">
+        <svg class="w-4 h-4 transition-transform details-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        查看 Abstract
+      </summary>
+      <div class="px-6 pb-6 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
         <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🈶 中文摘要</h4>
-          <p>{abstractZh}</p>
-        </div>
-      )}
-      {abstractEn && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🇬🇧 English Abstract</h4>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">Abstract</h4>
           <p>{abstractEn}</p>
         </div>
-      )}
-      {background && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🧩 背景与动机</h4>
-          <p>{background}</p>
-        </div>
-      )}
-      {method && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🔬 方法</h4>
-          <p>{method}</p>
-        </div>
-      )}
-      {results && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">📊 主要结果</h4>
-          <p>{results}</p>
-        </div>
-      )}
-      {innovation && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">✨ 创新点</h4>
-          <p>{innovation}</p>
-        </div>
-      )}
-      {inspiration && (
-        <div>
-          <h4 class="text-gray-900 dark:text-white font-medium mb-1">💡 深度启发</h4>
-          <p>{inspiration}</p>
-        </div>
-      )}
-    </div>
-  </details>
+      </div>
+    </details>
+  )}
 
   <!-- Footer actions -->
   <div class="px-6 py-3 border-t border-gray-100 dark:border-white/5 flex items-center justify-between gap-4">

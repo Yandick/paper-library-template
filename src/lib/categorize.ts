@@ -169,11 +169,8 @@ export function parseDigestSlug(slug: string): DigestMeta {
 
 export function formatDigestLabel(slug: string): string {
   const meta = parseDigestSlug(slug);
-  const d = new Date(`${meta.date}T00:00:00`);
-  const base = Number.isNaN(d.getTime())
-    ? meta.date
-    : d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-  return meta.pushSequence ? `${base} · 第 ${meta.pushSequence} 轮` : `${base} · 首轮`;
+  const round = meta.pushSequence ?? 1;
+  return `${meta.date} 第${round}轮`;
 }
 
 export function digestSortValue(slug: string): number {

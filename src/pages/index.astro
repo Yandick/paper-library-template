@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PaperCard from '../components/PaperCard.astro';
-import { loadTopicPrefs, categorizePapers, digestSortValue, formatDigestLabel, normalizePaper } from '../lib/categorize';
+import { loadTopicPrefs, categorizePapers, digestSortValue, normalizePaper, parseDigestSlug } from '../lib/categorize';
 
-// Load latest digest JSON
+// Load all digest rounds for the latest date
 let papers: any[] = [];
 let digestDate = '';
 let isDemo = false;
+let roundCount = 0;
 const prefs = loadTopicPrefs();
 
 try {
@@ -16,11 +17,22 @@ try {
     .sort((a, b) => digestSortValue(b) - digestSortValue(a));
 
   if (slugs.length > 0) {
-    digestDate = slugs[0]!;
-    const raw = digestFiles[`../content/digests/${digestDate}.json`] as any;
-    const jsonData = raw.default || raw;
-    const rawPapers: any[] = Array.isArray(jsonData) ? jsonData : (jsonData.papers || []);
-    papers = rawPapers.map((paper) => normalizePaper(paper, prefs));
+    digestDate = parseDigestSlug(slugs[0]!).date;
+    const latestDateSlugs = slugs
+      .filter((slug) => parseDigestSlug(slug).date === digestDate)
+      .sort((a, b) => digestSortValue(a) - digestSortValue(b));
+    roundCount = latestDateSlugs.length;
+
+    papers = latestDateSlugs.flatMap((slug) => {
+      const raw = digestFiles[`../content/digests/${slug}.json`] as any;
+      const jsonData = raw.default || raw;
+      const rawPapers: any[] = Array.isArray(jsonData) ? jsonData : (jsonData.papers || []);
+      const pushSequence = Array.isArray(jsonData) ? null : (jsonData.push_sequence ?? parseDigestSlug(slug).pushSequence ?? 1);
+      return rawPapers.map((paper) => normalizePaper({
+        ...paper,
+        pushSequence,
+      }, prefs));
+    });
   }
 } catch {}
 
@@ -38,6 +50,7 @@ if (papers.length === 0) {
       tldr: "这是一篇演示论文，用于预览页面样式。实际使用后会显示真实推送。",
       relevanceNote: "样式预览用途。",
       doi: "",
+      pushSequence: 1,
       topicTags: ["demo"],
       isNews: false,
     },
@@ -51,7 +64,7 @@ const categories = categorizePapers(papers, prefs);
   <!-- Hero section -->
   <div class="text-center mb-10">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
-      {isDemo ? '✨ Demo Preview' : `📅 ${formatDigestLabel(digestDate)}`}
+      {isDemo ? '✨ Demo Preview' : `📅 ${digestDate} · ${roundCount}轮汇总`}
     </div>
     <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
       每日论文推送
@@ -59,7 +72,7 @@ const categories = categorizePapers(papers, prefs);
     <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
       {isDemo
         ? '这是一个样式预览页面。实际使用后会显示真实推送。'
-        : `今日精选 ${papers.length} 篇论文，覆盖你的核心研究方向和前沿动态。`
+        : `今日共汇总 ${papers.length} 篇论文，覆盖当日 ${roundCount} 轮推送的全部结果。`
       }
     </p>
   </div>
@@ -121,7 +134,6 @@ const categories = categorizePapers(papers, prefs);
             sourceUrl={paper.sourceUrl}
             sourceLabel={paper.sourceLabel}
             abstractEn={paper.abstractEn}
-            abstractZh={paper.abstractZh}
             isNews={paper.isNews}
           />
         ))}

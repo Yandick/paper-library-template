@@ -37,7 +37,8 @@ try {
     const raw = fs.readFileSync(digestPath, 'utf-8');
     const data = JSON.parse(raw);
     const rawPapers = Array.isArray(data) ? data : (data.papers || []);
-    papers = rawPapers.map((paper: any) => normalizePaper(paper, prefs));
+    const pushSequence = Array.isArray(data) ? null : (data.push_sequence ?? 1);
+    papers = rawPapers.map((paper: any) => normalizePaper({ ...paper, pushSequence }, prefs));
   }
 } catch {}
 
@@ -101,7 +102,7 @@ const categories = categorizePapers(papers, prefs);
                 sourceUrl={paper.sourceUrl}
                 sourceLabel={paper.sourceLabel}
                 abstractEn={paper.abstractEn}
-                abstractZh={paper.abstractZh}
+                pushSequence={paper.pushSequence}
                 isNews={paper.isNews}
               />
             ))}
