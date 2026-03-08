@@ -1,5 +1,18 @@
 {
-  "topics": {},
-  "max_per_topic": 3,
-  "max_total": 8
+  "topics": {
+    "llm-recommendation-ir": {
+      "weight": 1.0,
+      "blocked": false,
+      "label": "LLM for Recommendation in Information Retrieval",
+      "keywords": [
+        "all:recommendation AND (all:\"large language model\" OR all:llm) AND (all:\"information retrieval\" OR all:retrieval)",
+        "all:\"conversational recommendation\" AND (all:\"large language model\" OR all:llm)",
+        "all:\"re-ranking\" AND all:recommendation AND (all:\"large language model\" OR all:llm)",
+        "all:\"agent recommendation\" AND (all:\"large language model\" OR all:llm)",
+        "all:\"retrieval-augmented recommendation\" AND (all:\"large language model\" OR all:llm)"
+      ]
+    }
+  },
+  "max_per_topic": 10,
+  "max_total": 50
 }

@@ -1,0 +1,56 @@
+{
+  "date": "2026-03-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "SORT: A Systematically Optimized Ranking Transformer for Industrial-scale Recommenders",
+      "authors": "Wang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "A ranking transformer optimized for industrial recommender systems, directly aligned with recommendation and ranking objectives.",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Directly targets industrial-scale ranking in recommender systems and is the strongest match to recommendation plus ranking relevance.",
+      "citekey": "",
+      "id": "",
+      "arxiv_id": "2603.03988v1",
+      "open_access_url": "https://arxiv.org/pdf/2603.03988v1"
+    },
+    {
+      "index": 2,
+      "title": "SafeCRS: Personalized Safety Alignment for LLM-Based Conversational Recommender Systems",
+      "authors": "Hao et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Personalized safety alignment for LLM-based conversational recommender systems.",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Highly relevant LLM-based conversational recommender systems paper with a concrete safety angle and clear CRS focus.",
+      "citekey": "",
+      "id": "",
+      "arxiv_id": "2603.03536v1",
+      "open_access_url": "https://arxiv.org/pdf/2603.03536v1"
+    }
+  ]
+}
