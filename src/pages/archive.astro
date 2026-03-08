@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const digestDir = path.resolve('src/content/digests');
+let digests: { date: string; paperCount: number }[] = [];
+
+try {
+  const files = fs.readdirSync(digestDir)
+    .filter(f => f.endsWith('.json'))
+    .sort()
+    .reverse();
+
+  digests = files.map(f => {
+    const date = f.replace('.json', '');
+    try {
+      const raw = JSON.parse(fs.readFileSync(path.join(digestDir, f), 'utf-8'));
+      const papers = Array.isArray(raw) ? raw : (raw.papers || []);
+      return { date, paperCount: papers.length };
+    } catch {
+      return { date, paperCount: 0 };
+    }
+  });
+} catch {}
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+}
+---
+
+<Layout title="Archive">
+  <div class="text-center mb-10">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">📚 推送归档</h1>
+    <p class="text-gray-500 dark:text-gray-400">所有历史推送记录</p>
+  </div>
+
+  {digests.length === 0 ? (
+    <div class="text-center py-20 text-gray-500">
+      <p class="text-4xl mb-4">📭</p>
+      <p>暂无推送记录</p>
+    </div>
+  ) : (
+    <div class="space-y-3 max-w-2xl mx-auto">
+      {digests.map((d, i) => (
+        <a href={`/digest/${d.date}`}
+           class="block p-5 rounded-xl bg-surface-1 border border-gray-200 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/30 shadow-sm dark:shadow-none transition-all duration-200 group">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="font-medium text-gray-900 dark:text-white group-hover:text-primary transition">
+                {formatDate(d.date)}
+              </div>
+              <div class="text-sm text-gray-400 dark:text-gray-500 font-mono mt-0.5">{d.date}</div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-500 dark:text-gray-400">{d.paperCount} 篇</span>
+              <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-primary transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+          {i === 0 && (
+            <div class="mt-2">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">最新</span>
+            </div>
+          )}
+        </a>
+      ))}
+    </div>
+  )}
+</Layout>

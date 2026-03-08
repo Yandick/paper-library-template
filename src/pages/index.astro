@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PaperCard from '../components/PaperCard.astro';
+import { loadTopicPrefs, categorizePapers, normalizePaper } from '../lib/categorize';
+
+// Load latest digest JSON
+let papers: any[] = [];
+let digestDate = '';
+let isDemo = false;
+
+try {
+  const digestFiles = import.meta.glob('../content/digests/*.json', { eager: true });
+  const dates = Object.keys(digestFiles)
+    .map(f => f.match(/(\d{4}-\d{2}-\d{2})/)?.[1])
+    .filter(Boolean)
+    .sort()
+    .reverse();
+
+  if (dates.length > 0) {
+    digestDate = dates[0]!;
+    const raw = digestFiles[`../content/digests/${digestDate}.json`] as any;
+    const jsonData = raw.default || raw;
+    const rawPapers: any[] = Array.isArray(jsonData) ? jsonData : (jsonData.papers || []);
+    papers = rawPapers.map(normalizePaper);
+  }
+} catch {}
+
+if (papers.length === 0) {
+  isDemo = true;
+  digestDate = '2026-01-01';
+  papers = [
+    {
+      title: "Demo Paper — 这是一个样式预览",
+      authors: "Paper Digest Team",
+      journal: "Demo Journal",
+      year: 2026,
+      casZone: "Q1",
+      impactFactor: 10.0,
+      tldr: "这是一篇演示论文，用于预览页面样式。实际使用后会显示真实推送。",
+      relevanceNote: "样式预览用途。",
+      doi: "",
+      topicTags: ["demo"],
+      isNews: false,
+    },
+  ];
+}
+
+// Dynamic categorization from topic_prefs.json
+const prefs = loadTopicPrefs();
+const categories = categorizePapers(papers, prefs);
+
+function formatDate(dateStr: string) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+}
+---
+
+<Layout title={`${digestDate} Daily Digest`}>
+  <!-- Hero section -->
+  <div class="text-center mb-10">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
+      {isDemo ? '✨ Demo Preview' : `📅 ${formatDate(digestDate)}`}
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+      每日论文推送
+    </h1>
+    <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+      {isDemo
+        ? '这是一个样式预览页面。实际使用后会显示真实推送。'
+        : `今日精选 ${papers.length} 篇论文，覆盖你的核心研究方向和前沿动态。`
+      }
+    </p>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="flex justify-center gap-6 mb-10 text-sm">
+    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-1 border border-gray-200 dark:border-white/5">
+      <span class="text-2xl">📄</span>
+      <div>
+        <div class="text-gray-900 dark:text-white font-semibold">{papers.filter(p => !p.isNews).length}</div>
+        <div class="text-gray-500 text-xs">论文</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-1 border border-gray-200 dark:border-white/5">
+      <span class="text-2xl">🔥</span>
+      <div>
+        <div class="text-gray-900 dark:text-white font-semibold">{papers.filter(p => p.isNews).length}</div>
+        <div class="text-gray-500 text-xs">资讯</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-1 border border-gray-200 dark:border-white/5">
+      <span class="text-2xl">📂</span>
+      <div>
+        <div class="text-gray-900 dark:text-white font-semibold">{categories.length}</div>
+        <div class="text-gray-500 text-xs">分类</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic category sections -->
+  {categories.map((cat) => (
+    <section class="mb-10">
+      <div class="flex items-center gap-3 mb-6">
+        <div class={`w-1 h-6 rounded-full ${cat.barColor}`}></div>
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">{cat.label}</h2>
+        <span class="text-xs text-gray-400 dark:text-gray-500">{cat.hintText}</span>
+      </div>
+      <div class="space-y-6">
+        {cat.papers.map((paper: any) => (
+          <PaperCard
+            index={papers.indexOf(paper) + 1}
+            title={paper.title}
+            authors={paper.authors}
+            journal={paper.journal}
+            year={paper.year}
+            casZone={paper.casZone}
+            impactFactor={paper.impactFactor}
+            citations={paper.citations}
+            tldr={paper.tldr}
+            relevanceNote={paper.relevanceNote}
+            background={paper.background}
+            method={paper.method}
+            results={paper.results}
+            innovation={paper.innovation}
+            inspiration={paper.inspiration}
+            doi={paper.doi}
+            topicTags={paper.topicTags || []}
+            isNews={paper.isNews}
+          />
+        ))}
+      </div>
+    </section>
+  ))}
+
+  {papers.length === 0 && (
+    <div class="text-center py-20 text-gray-500">
+      <p class="text-4xl mb-4">📭</p>
+      <p>暂无推送记录</p>
+    </div>
+  )}
+</Layout>

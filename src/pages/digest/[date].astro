@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PaperCard from '../../components/PaperCard.astro';
+import { loadTopicPrefs, categorizePapers, normalizePaper } from '../../lib/categorize';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const digestDir = path.resolve('src/content/digests');
+  let paths: { params: { date: string } }[] = [];
+
+  try {
+    const files = fs.readdirSync(digestDir);
+    paths = files
+      .filter(f => f.endsWith('.json'))
+      .map(f => ({
+        params: { date: f.replace('.json', '') }
+      }));
+  } catch {}
+
+  if (paths.length === 0) {
+    paths.push({ params: { date: 'demo' } });
+  }
+
+  return paths;
+}
+
+const { date } = Astro.params;
+
+let papers: any[] = [];
+let digestDate = date || 'demo';
+
+try {
+  const digestPath = path.resolve(`src/content/digests/${digestDate}.json`);
+  if (fs.existsSync(digestPath)) {
+    const raw = fs.readFileSync(digestPath, 'utf-8');
+    const data = JSON.parse(raw);
+    const rawPapers = Array.isArray(data) ? data : (data.papers || []);
+    papers = rawPapers.map(normalizePaper);
+  }
+} catch {}
+
+// Dynamic categorization
+const prefs = loadTopicPrefs();
+const categories = categorizePapers(papers, prefs);
+
+function formatDate(dateStr: string) {
+  if (dateStr === 'demo') return 'Demo';
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+}
+---
+
+<Layout title={`${digestDate} Digest`}>
+  <div class="mb-6">
+    <a href="/" class="text-sm text-primary hover:text-primary/80 transition flex items-center gap-1 mb-4">
+      ← 返回今日推送
+    </a>
+  </div>
+
+  <div class="text-center mb-10">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
+      📅 {formatDate(digestDate)}
+    </div>
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+      论文推送归档
+    </h1>
+    <p class="text-gray-500 dark:text-gray-400">
+      共 {papers.length} 篇论文
+    </p>
+  </div>
+
+  {papers.length === 0 ? (
+    <div class="text-center py-20 text-gray-500">
+      <p class="text-4xl mb-4">📭</p>
+      <p>该日期暂无推送记录</p>
+    </div>
+  ) : (
+    <>
+      {categories.map((cat) => (
+        <section class="mb-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class={`w-1 h-6 rounded-full ${cat.barColor}`}></div>
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white">{cat.label}</h2>
+            <span class="text-xs text-gray-400 dark:text-gray-500">{cat.hintText}</span>
+          </div>
+          <div class="space-y-6">
+            {cat.papers.map((paper: any) => (
+              <PaperCard
+                index={papers.indexOf(paper) + 1}
+                title={paper.title}
+                authors={paper.authors}
+                journal={paper.journal}
+                year={paper.year}
+                casZone={paper.casZone}
+                impactFactor={paper.impactFactor}
+                citations={paper.citations}
+                tldr={paper.tldr}
+                relevanceNote={paper.relevanceNote}
+                background={paper.background}
+                method={paper.method}
+                results={paper.results}
+                innovation={paper.innovation}
+                inspiration={paper.inspiration}
+                doi={paper.doi}
+                topicTags={paper.topicTags || []}
+                isNews={paper.isNews}
+              />
+            ))}
+          </div>
+        </section>
+      ))}
+    </>
+  )}
+</Layout>

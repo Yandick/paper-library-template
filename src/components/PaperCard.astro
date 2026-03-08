@@ -1,0 +1,156 @@
+---
+interface Props {
+  index: number;
+  title: string;
+  authors: string;
+  journal: string;
+  year: number;
+  casZone?: string;
+  impactFactor?: number;
+  citations?: number;
+  tldr: string;
+  relevanceNote: string;
+  background?: string;
+  method?: string;
+  results?: string;
+  innovation?: string;
+  inspiration?: string;
+  doi?: string;
+  topicTags: string[];
+  isNews?: boolean;
+}
+
+import { getTagColorClass } from '../lib/categorize';
+
+const {
+  index, title, authors, journal, year, casZone, impactFactor, citations,
+  tldr, relevanceNote, background, method, results, innovation,
+  inspiration, doi, topicTags, isNews
+} = Astro.props;
+
+function getTagClass(tag: string) {
+  return getTagColorClass(tag);
+}
+
+// Format casZone: "1" → "1区", "Q1" → "1区", "Q1 Top" → "1区 Top"
+function formatZone(zone?: string) {
+  if (!zone) return '';
+  const hasTop = /top/i.test(zone);
+  const num = zone.replace(/[Qq区Top\s]/g, '').trim();
+  if (!num) return zone;
+  return `${num}区${hasTop ? ' Top' : ''}`;
+}
+
+const displayZone = formatZone(casZone);
+---
+
+<article class="group relative bg-surface-1 rounded-2xl border border-gray-200 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/30 shadow-sm dark:shadow-none transition-all duration-300 overflow-hidden">
+  <!-- Card header -->
+  <div class="p-6 pb-4">
+    <!-- Topic tags -->
+    <div class="flex flex-wrap gap-2 mb-3">
+      <span class="text-xs font-mono text-gray-400 dark:text-gray-500">#{index}</span>
+      {topicTags.map(tag => (
+        <span class={`text-xs px-2 py-0.5 rounded-full font-medium ${getTagClass(tag)}`}>
+          {tag}
+        </span>
+      ))}
+      {isNews && <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 dark:bg-red-500/20 dark:text-red-300 font-medium">🔥 HOT</span>}
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white leading-snug mb-2 group-hover:text-primary transition">
+      {title}
+    </h3>
+
+    <!-- Metadata line -->
+    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
+      <span>{authors}</span>
+      <span class="text-gray-300 dark:text-gray-600">·</span>
+      <span class="font-medium text-gray-700 dark:text-gray-300">{journal}</span>
+      <span class="text-gray-300 dark:text-gray-600">·</span>
+      <span>{year}</span>
+      {casZone && (
+        <>
+          <span class="text-gray-300 dark:text-gray-600">·</span>
+          <span class="text-amber-600 dark:text-amber-400 font-medium">{displayZone}</span>
+        </>
+      )}
+      {impactFactor && (
+        <>
+          <span class="text-gray-300 dark:text-gray-600">·</span>
+          <span class="text-amber-600 dark:text-amber-400">IF {impactFactor}</span>
+        </>
+      )}
+      {citations != null && citations > 0 && (
+        <>
+          <span class="text-gray-300 dark:text-gray-600">·</span>
+          <span class="text-gray-500 dark:text-gray-400">🔗 {citations} 引用</span>
+        </>
+      )}
+    </div>
+
+    <!-- TLDR highlight -->
+    <div class="bg-indigo-50 border border-indigo-200 dark:bg-primary/10 dark:border-primary/20 rounded-xl p-4 mb-4">
+      <p class="text-sm font-medium text-indigo-700 dark:text-primary/90">🎯 {tldr}</p>
+    </div>
+
+    <!-- Relevance note -->
+    <div class="bg-amber-50 border border-amber-200 dark:bg-amber-500/10 dark:border-amber-500/20 rounded-xl p-4 mb-4">
+      <p class="text-sm text-amber-700 dark:text-amber-200/80">💡 <strong>对你的启发：</strong>{relevanceNote}</p>
+    </div>
+  </div>
+
+  <!-- Expandable details -->
+  <details class="border-t border-gray-100 dark:border-white/5">
+    <summary class="px-6 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer transition flex items-center gap-2">
+      <svg class="w-4 h-4 transition-transform details-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+      展开详细解读
+    </summary>
+    <div class="px-6 pb-6 space-y-4 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+      {background && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🧩 背景与动机</h4>
+          <p>{background}</p>
+        </div>
+      )}
+      {method && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🔬 方法</h4>
+          <p>{method}</p>
+        </div>
+      )}
+      {results && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">📊 主要结果</h4>
+          <p>{results}</p>
+        </div>
+      )}
+      {innovation && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">✨ 创新点</h4>
+          <p>{innovation}</p>
+        </div>
+      )}
+      {inspiration && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">💡 深度启发</h4>
+          <p>{inspiration}</p>
+        </div>
+      )}
+    </div>
+  </details>
+
+  <!-- Footer actions -->
+  <div class="px-6 py-3 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+    {doi && (
+      <a href={`https://doi.org/${doi}`} target="_blank" rel="noopener"
+         class="text-xs text-primary hover:text-primary/80 transition flex items-center gap-1">
+        📄 原文链接
+      </a>
+    )}
+    <span class="text-xs text-gray-400 dark:text-gray-500 font-mono">{doi || ''}</span>
+  </div>
+</article>

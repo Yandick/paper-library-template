@@ -1,0 +1,96 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>{title} | Paper Digest</title>
+
+  <!-- Theme: prevent flash -->
+  <script is:inline>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <style>
+    /* CSS custom properties for theme colors */
+    :root {
+      --surface-0: #f8fafc;
+      --surface-1: #ffffff;
+      --surface-2: #f1f5f9;
+      --surface-3: #e2e8f0;
+    }
+    .dark {
+      --surface-0: #0f0f13;
+      --surface-1: #16161d;
+      --surface-2: #1e1e28;
+      --surface-3: #2a2a38;
+    }
+  </style>
+</head>
+<body class="bg-surface-0 min-h-screen font-sans text-gray-800 dark:text-gray-200 transition-colors duration-300">
+  <!-- Top nav -->
+  <nav class="sticky top-0 z-50 backdrop-blur-lg bg-surface-0/80 border-b border-gray-200 dark:border-white/5">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-lg font-semibold">
+        <span class="text-2xl">📬</span>
+        <span class="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Paper Digest</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <div class="flex gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <a href="/" class="hover:text-gray-900 dark:hover:text-white transition">Today</a>
+          <a href="/archive" class="hover:text-gray-900 dark:hover:text-white transition">Archive</a>
+        </div>
+        <!-- Theme toggle -->
+        <button id="theme-toggle" type="button"
+                class="p-2 rounded-xl bg-surface-2 hover:bg-surface-3 transition-colors"
+                aria-label="Toggle theme">
+          <!-- Sun icon (visible in dark mode) -->
+          <svg class="w-5 h-5 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <!-- Moon icon (visible in light mode) -->
+          <svg class="w-5 h-5 block dark:hidden text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-white/5 py-6 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-gray-400 dark:text-gray-500">
+      Paper Digest — AI-powered academic paper curation
+    </div>
+  </footer>
+
+  <!-- Theme toggle script -->
+  <script is:inline>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
