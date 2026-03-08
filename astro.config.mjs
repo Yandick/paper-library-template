@@ -4,5 +4,5 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  // site: 'https://your-site.vercel.app',  // Set your Vercel URL here
+  site: 'https://paper-library-template.vercel.app',
 });
