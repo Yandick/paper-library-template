@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Multi-Agent Large Language Model Based Emotional Detoxification Through Personalized Intensity Control for Consumer Protection",
+      "authors": "Keito Inoshita",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "In the attention economy, sensational content exposes consumers to excessive emotional stimulation, hindering calm decision-making. This study proposes Multi-Agent LLM-based Emotio",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "inoshita2026_multi",
+      "id": "arxiv:2602.23123v1",
+      "arxiv_id": "2602.23123v1",
+      "open_access_url": "https://arxiv.org/pdf/2602.23123v1"
+    },
+    {
+      "index": 2,
+      "title": "Multi-Agent Collaborative Filtering: Orchestrating Users and Items for Agentic Recommendations",
+      "authors": "Xia et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Agentic recommendations cast recommenders as large language model (LLM) agents that can plan, reason, use tools, and interact with users of varying preferences in web applications.",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "xia2025_multi",
+      "id": "arxiv:2511.18413v3",
+      "arxiv_id": "2511.18413v3",
+      "open_access_url": "https://arxiv.org/pdf/2511.18413v3"
+    }
+  ],
+  "push_sequence": 4
+}
