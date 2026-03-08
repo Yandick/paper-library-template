@@ -9,6 +9,11 @@
       "year": 2025,
       "journal": "",
       "doi": "",
+      "abstract": "Large language models (LLMs) have shown strong potential in recommendation tasks due to their strengths in language understanding, reasoning and knowledge integration. These capabilities are especially beneficial for review-based recommendation, which relies on semantically rich user-generated texts",
+      "categories": [
+        "cs.CL"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
@@ -34,6 +39,14 @@
       "year": 2025,
       "journal": "",
       "doi": "",
+      "abstract": "Retrieval-Augmented Generation (RAG) has shown promise in enhancing recommendation systems by incorporating external context into large language model prompts. However, existing RAG-based approaches often rely on static retrieval heuristics and fail to capture nuanced user preferences in dynamic rec",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",

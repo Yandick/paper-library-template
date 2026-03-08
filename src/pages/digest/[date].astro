@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PaperCard from '../../components/PaperCard.astro';
-import { loadTopicPrefs, categorizePapers, normalizePaper } from '../../lib/categorize';
+import { loadTopicPrefs, categorizePapers, formatDigestLabel, normalizePaper } from '../../lib/categorize';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -29,6 +29,7 @@ const { date } = Astro.params;
 
 let papers: any[] = [];
 let digestDate = date || 'demo';
+const prefs = loadTopicPrefs();
 
 try {
   const digestPath = path.resolve(`src/content/digests/${digestDate}.json`);
@@ -36,19 +37,11 @@ try {
     const raw = fs.readFileSync(digestPath, 'utf-8');
     const data = JSON.parse(raw);
     const rawPapers = Array.isArray(data) ? data : (data.papers || []);
-    papers = rawPapers.map(normalizePaper);
+    papers = rawPapers.map((paper: any) => normalizePaper(paper, prefs));
   }
 } catch {}
 
-// Dynamic categorization
-const prefs = loadTopicPrefs();
 const categories = categorizePapers(papers, prefs);
-
-function formatDate(dateStr: string) {
-  if (dateStr === 'demo') return 'Demo';
-  const d = new Date(dateStr + 'T00:00:00');
-  return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-}
 ---
 
 <Layout title={`${digestDate} Digest`}>
@@ -60,7 +53,7 @@ function formatDate(dateStr: string) {
 
   <div class="text-center mb-10">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
-      📅 {formatDate(digestDate)}
+      📅 {digestDate === 'demo' ? 'Demo' : formatDigestLabel(digestDate)}
     </div>
     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">
       论文推送归档
@@ -104,6 +97,11 @@ function formatDate(dateStr: string) {
                 inspiration={paper.inspiration}
                 doi={paper.doi}
                 topicTags={paper.topicTags || []}
+                categoryTags={paper.categoryTags || []}
+                sourceUrl={paper.sourceUrl}
+                sourceLabel={paper.sourceLabel}
+                abstractEn={paper.abstractEn}
+                abstractZh={paper.abstractZh}
                 isNews={paper.isNews}
               />
             ))}

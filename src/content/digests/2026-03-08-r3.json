@@ -9,6 +9,11 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "Approximate Nearest Neighbor (ANN) search has become fundamental to modern AI infrastructure, powering recommendation systems, search engines, and large language models across industry leaders from Google to OpenAI. Hierarchical Navigable Small World (HNSW) graphs have emerged as the dominant ANN al",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
@@ -34,6 +39,12 @@
       "year": 2025,
       "journal": "",
       "doi": "",
+      "abstract": "Vector Similarity Search (VSS) in high-dimensional spaces is rapidly emerging as core functionality in next-generation database systems for numerous data-intensive services -- from embedding lookups in large language models (LLMs), to semantic information retrieval and recommendation engines. Curren",
+      "categories": [
+        "cs.IR",
+        "cs.DB"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",

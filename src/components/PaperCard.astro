@@ -17,6 +17,11 @@ interface Props {
   inspiration?: string;
   doi?: string;
   topicTags: string[];
+  categoryTags?: string[];
+  sourceUrl?: string;
+  sourceLabel?: string;
+  abstractEn?: string;
+  abstractZh?: string;
   isNews?: boolean;
 }
 
@@ -25,7 +30,7 @@ import { getTagColorClass } from '../lib/categorize';
 const {
   index, title, authors, journal, year, casZone, impactFactor, citations,
   tldr, relevanceNote, background, method, results, innovation,
-  inspiration, doi, topicTags, isNews
+  inspiration, doi, topicTags, categoryTags, sourceUrl, sourceLabel, abstractEn, abstractZh, isNews
 } = Astro.props;
 
 function getTagClass(tag: string) {
@@ -55,12 +60,22 @@ const displayZone = formatZone(casZone);
           {tag}
         </span>
       ))}
+      {categoryTags?.map(tag => (
+        <span class="text-xs px-2 py-0.5 rounded-full font-medium bg-slate-100 text-slate-700 dark:bg-slate-500/20 dark:text-slate-200">
+          {tag}
+        </span>
+      ))}
       {isNews && <span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 dark:bg-red-500/20 dark:text-red-300 font-medium">🔥 HOT</span>}
     </div>
 
     <!-- Title -->
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white leading-snug mb-2 group-hover:text-primary transition">
-      {title}
+      {sourceUrl ? (
+        <a href={sourceUrl} target="_blank" rel="noopener" class="hover:underline decoration-primary/50 underline-offset-4 inline-flex items-start gap-2">
+          <span>{title}</span>
+          <span class="text-sm text-primary mt-0.5">↗</span>
+        </a>
+      ) : title}
     </h3>
 
     <!-- Metadata line -->
@@ -110,6 +125,18 @@ const displayZone = formatZone(casZone);
       展开详细解读
     </summary>
     <div class="px-6 pb-6 space-y-4 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+      {abstractZh && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🈶 中文摘要</h4>
+          <p>{abstractZh}</p>
+        </div>
+      )}
+      {abstractEn && (
+        <div>
+          <h4 class="text-gray-900 dark:text-white font-medium mb-1">🇬🇧 English Abstract</h4>
+          <p>{abstractEn}</p>
+        </div>
+      )}
       {background && (
         <div>
           <h4 class="text-gray-900 dark:text-white font-medium mb-1">🧩 背景与动机</h4>
@@ -144,13 +171,13 @@ const displayZone = formatZone(casZone);
   </details>
 
   <!-- Footer actions -->
-  <div class="px-6 py-3 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
-    {doi && (
-      <a href={`https://doi.org/${doi}`} target="_blank" rel="noopener"
-         class="text-xs text-primary hover:text-primary/80 transition flex items-center gap-1">
-        📄 原文链接
+  <div class="px-6 py-3 border-t border-gray-100 dark:border-white/5 flex items-center justify-between gap-4">
+    {sourceUrl ? (
+      <a href={sourceUrl} target="_blank" rel="noopener"
+         class="text-xs text-primary hover:text-primary/80 transition flex items-center gap-1 break-all">
+        📄 {sourceLabel || '原文链接'}
       </a>
-    )}
-    <span class="text-xs text-gray-400 dark:text-gray-500 font-mono">{doi || ''}</span>
+    ) : <span></span>}
+    <span class="text-xs text-gray-400 dark:text-gray-500 font-mono break-all text-right">{sourceUrl || doi || ''}</span>
   </div>
 </article>

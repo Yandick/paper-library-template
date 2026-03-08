@@ -9,6 +9,11 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "While Transformers have achieved remarkable success in LLMs through superior scalability, their application in industrial-scale ranking models remains nascent, hindered by the challenges of high feature sparsity and low label density. In this paper, we propose SORT (Systematically Optimized Ranking ",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
@@ -34,6 +39,13 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "Current LLM-based conversational recommender systems (CRS) primarily optimize recommendation accuracy and user satisfaction. We identify an underexplored vulnerability in which recommendation outputs may negatively impact users by violating personalized safety constraints, when individualized safety",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",

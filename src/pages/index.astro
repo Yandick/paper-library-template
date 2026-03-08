@@ -1,27 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PaperCard from '../components/PaperCard.astro';
-import { loadTopicPrefs, categorizePapers, normalizePaper } from '../lib/categorize';
+import { loadTopicPrefs, categorizePapers, digestSortValue, formatDigestLabel, normalizePaper } from '../lib/categorize';
 
 // Load latest digest JSON
 let papers: any[] = [];
 let digestDate = '';
 let isDemo = false;
+const prefs = loadTopicPrefs();
 
 try {
   const digestFiles = import.meta.glob('../content/digests/*.json', { eager: true });
-  const dates = Object.keys(digestFiles)
-    .map(f => f.match(/(\d{4}-\d{2}-\d{2})/)?.[1])
-    .filter(Boolean)
-    .sort()
-    .reverse();
+  const slugs = Object.keys(digestFiles)
+    .map(f => f.replace('../content/digests/', '').replace('.json', ''))
+    .sort((a, b) => digestSortValue(b) - digestSortValue(a));
 
-  if (dates.length > 0) {
-    digestDate = dates[0]!;
+  if (slugs.length > 0) {
+    digestDate = slugs[0]!;
     const raw = digestFiles[`../content/digests/${digestDate}.json`] as any;
     const jsonData = raw.default || raw;
     const rawPapers: any[] = Array.isArray(jsonData) ? jsonData : (jsonData.papers || []);
-    papers = rawPapers.map(normalizePaper);
+    papers = rawPapers.map((paper) => normalizePaper(paper, prefs));
   }
 } catch {}
 
@@ -45,21 +44,14 @@ if (papers.length === 0) {
   ];
 }
 
-// Dynamic categorization from topic_prefs.json
-const prefs = loadTopicPrefs();
 const categories = categorizePapers(papers, prefs);
-
-function formatDate(dateStr: string) {
-  const d = new Date(dateStr + 'T00:00:00');
-  return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-}
 ---
 
 <Layout title={`${digestDate} Daily Digest`}>
   <!-- Hero section -->
   <div class="text-center mb-10">
     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
-      {isDemo ? '✨ Demo Preview' : `📅 ${formatDate(digestDate)}`}
+      {isDemo ? '✨ Demo Preview' : `📅 ${formatDigestLabel(digestDate)}`}
     </div>
     <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
       每日论文推送
@@ -125,6 +117,11 @@ function formatDate(dateStr: string) {
             inspiration={paper.inspiration}
             doi={paper.doi}
             topicTags={paper.topicTags || []}
+            categoryTags={paper.categoryTags || []}
+            sourceUrl={paper.sourceUrl}
+            sourceLabel={paper.sourceLabel}
+            abstractEn={paper.abstractEn}
+            abstractZh={paper.abstractZh}
             isNews={paper.isNews}
           />
         ))}

@@ -9,6 +9,11 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "In the attention economy, sensational content exposes consumers to excessive emotional stimulation, hindering calm decision-making. This study proposes Multi-Agent LLM-based Emotional deToxification (MALLET), a multi-agent information sanitization system consisting of four agents: Emotion Analysis, ",
+      "categories": [
+        "cs.AI"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
@@ -34,6 +39,12 @@
       "year": 2025,
       "journal": "",
       "doi": "",
+      "abstract": "Agentic recommendations cast recommenders as large language model (LLM) agents that can plan, reason, use tools, and interact with users of varying preferences in web applications. However, most existing agentic recommender systems focus on generic single-agent plan-execute workflows or multi-agent ",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",

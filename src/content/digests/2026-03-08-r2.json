@@ -9,6 +9,12 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "Large language models (LLMs) are increasingly adopted as the backbone of recommender systems. However, user-item interactions in real-world scenarios are non-stationary, making preference drift over time inevitable. Existing model update strategies mainly rely on global fine-tuning or pointwise edit",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
@@ -34,6 +40,12 @@
       "year": 2026,
       "journal": "",
       "doi": "",
+      "abstract": "Generative recommendation has recently attracted widespread attention in industry due to its potential for scaling and stronger model capacity. However, deploying real-time generative recommendation in large-scale advertising requires designs beyond large-language-model (LLM)-style training and serv",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
       "jcr_quartile": "",
       "cas_zone": "",
       "impact_factor": "",
