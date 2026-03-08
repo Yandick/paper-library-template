@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+      "authors": "Zeng et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) are increasingly adopted as the backbone of recommender systems. However, user-item interactions in real-world scenarios are non-stationary, making pre",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "zeng2026_raie",
+      "id": "arxiv:2603.00638v1",
+      "arxiv_id": "2603.00638v1",
+      "open_access_url": "https://arxiv.org/pdf/2603.00638v1"
+    },
+    {
+      "index": 2,
+      "title": "Generative Recommendation for Large-Scale Advertising",
+      "authors": "Xue et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Generative recommendation has recently attracted widespread attention in industry due to its potential for scaling and stronger model capacity. However, deploying real-time generat",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "xue2026_generative",
+      "id": "arxiv:2602.22732v2",
+      "arxiv_id": "2602.22732v2",
+      "open_access_url": "https://arxiv.org/pdf/2602.22732v2"
+    }
+  ],
+  "push_sequence": 2
+}
