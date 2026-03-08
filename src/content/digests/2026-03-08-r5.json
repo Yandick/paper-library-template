@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Learning to Shop Like Humans: A Review-driven Retrieval-Augmented Recommendation Framework with LLMs",
+      "authors": "Wei et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) have shown strong potential in recommendation tasks due to their strengths in language understanding, reasoning and knowledge integration. These capabi",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "wei2025_learning",
+      "id": "arxiv:2509.00698v1",
+      "arxiv_id": "2509.00698v1",
+      "open_access_url": "https://arxiv.org/pdf/2509.00698v1"
+    },
+    {
+      "index": 2,
+      "title": "ARAG: Agentic Retrieval Augmented Generation for Personalized Recommendation",
+      "authors": "Maragheh et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Retrieval-Augmented Generation (RAG) has shown promise in enhancing recommendation systems by incorporating external context into large language model prompts. However, existing RA",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "maragheh2025_arag",
+      "id": "arxiv:2506.21931v2",
+      "arxiv_id": "2506.21931v2",
+      "open_access_url": "https://arxiv.org/pdf/2506.21931v2"
+    }
+  ],
+  "push_sequence": 5
+}
