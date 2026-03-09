@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-09",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Recommendation-as-Experience: A framework for context-sensitive adaptation in conversational recommender systems",
+      "authors": "Mahmud et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "While Conversational Recommender Systems (CRS) have matured technically, they frequently lack principled methods for encoding latent experiential aims as adaptive state variables. Consequently, contemporary architectures often prioritise ranking accuracy at the expense of nuanced, context-sensitive interaction behaviours. This paper addresses this gap through a comprehensive multi-domain study ($N = 168$) that quantifies the joint prioritisation of three critical interaction aims: educative (to inform and justify), explorative (to diversify and inspire), and affective (to align emotionally and socially). Utilising Bayesian hierarchical ordinal regression, we establish domain profiles and perceived item value as systematic modulators of these priorities. Furthermore, we identify stable user-level preferences for autonomy that persist across distinct interactional goals, suggesting that agency is a fundamental requirement of the conversational experience. Drawing on these empirical foundations, we formalise the Recommendation-as-Experience (RAE) adaptation framework. RAE systematically encodes contextual and individual signals into structured state representations, mapping them to experience-aligned dialogue policies realised through retrieval diversification, heuristic logic, or Large Language Model based controllable generation. As an architecture-agnostic blueprint, RAE facilitates the design of context-sensitive CRS that effectively balance experiential quality with predictive performance.",
+      "categories": [
+        "cs.HC"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "While Conversational Recommender Systems (CRS) have matured technically, they frequently lack principled methods for encoding latent experiential aims as adaptive state variables. ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "mahmud2026_recommendation",
+      "id": "arxiv:2601.07401v1",
+      "arxiv_id": "2601.07401v1",
+      "open_access_url": "https://arxiv.org/pdf/2601.07401v1"
+    },
+    {
+      "index": 2,
+      "title": "ScienceDB AI: An LLM-Driven Agentic Recommender System for Large-Scale Scientific Data Sharing Services",
+      "authors": "Long et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "The rapid growth of AI for Science (AI4S) has underscored the significance of scientific datasets, leading to the establishment of numerous national scientific data centers and sharing platforms. Despite this progress, efficiently promoting dataset sharing and utilization for scientific research remains challenging. Scientific datasets contain intricate domain-specific knowledge and contexts, rendering traditional collaborative filtering-based recommenders inadequate. Recent advances in Large Language Models (LLMs) offer unprecedented opportunities to build conversational agents capable of deep semantic understanding and personalized recommendations. In response, we present ScienceDB AI, a novel LLM-driven agentic recommender system developed on Science Data Bank (ScienceDB), one of the largest global scientific data-sharing platforms. ScienceDB AI leverages natural language conversations and deep reasoning to accurately recommend datasets aligned with researchers' scientific intents and evolving requirements. The system introduces several innovations: a Scientific Intention Perceptor to extract structured experimental elements from complicated queries, a Structured Memory Compressor to manage multi-turn dialogues effectively, and a Trustworthy Retrieval-Augmented Generation (Trustworthy RAG) framework. The Trustworthy RAG employs a two-stage retrieval mechanism and provides citable dataset references via Citable Scientific Task Record (CSTR) identifiers, enhancing recommendation trustworthiness and reproducibility. Through extensive offline and online experiments using over 10 million real-world datasets, ScienceDB AI has demonstrated significant effectiveness. To our knowledge, ScienceDB AI is the first LLM-driven conversational recommender tailored explicitly for large-scale scientific dataset sharing services. The platform is publicly accessible at: https://ai.scidb.cn/en.",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.DL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "The rapid growth of AI for Science (AI4S) has underscored the significance of scientific datasets, leading to the establishment of numerous national scientific data centers and sha",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "long2026_sciencedb",
+      "id": "arxiv:2601.01118v1",
+      "arxiv_id": "2601.01118v1",
+      "open_access_url": "https://arxiv.org/pdf/2601.01118v1"
+    }
+  ],
+  "push_sequence": 2
+}
