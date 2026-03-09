@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-09",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "RAG-VisualRec: An Open Resource for Vision- and Text-Enhanced Retrieval-Augmented Generation in Recommendation",
+      "authors": "Tourani et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "This paper addresses the challenge of building multimodal recommender systems for the movie domain, where sparse item metadata (e.g., title and genres) can limit retrieval quality and downstream recommendations. We introduce RAG-VisualRec, an open resource and reproducible pipeline that combines (i) LLM-generated item-side plot descriptions and (ii) trailer-derived visual (and optional audio) embeddings, supporting both retrieval-augmented generation (RAG) and collaborative-filtering style workflows. Our pipeline augments sparse metadata into richer textual signals and integrates modalities via configurable fusion strategies (e.g., PCA and CCA) before retrieval and optional LLM-based re-ranking. Beyond providing the resource, we provide a complementary analysis that increases transparency and reproducibility. In particular, we introduce LLMGenQC, a critic-based quality-control module (LLM-as-judge) that audits synthetic synopses for semantic alignment with metadata, consistency, safety, and basic sanity checks, releasing critic scores and pass/fail labels alongside the generated artifacts. We report ablation studies that quantify the impact of key design choices, including retrieval depth, fusion strategy, and user-embedding construction. Across experiments, CCA-based fusion consistently improves recall over unimodal baselines, while LLM-based re-ranking typically improves nDCG by refining top-K selection from the retrieved candidate pool, especially when textual evidence is limited. By releasing RAG-VisualRec, we enable further research on multimodal RAG recommenders, quality auditing of LLM-generated side information, and long-tail oriented evaluation protocols. All code, data, and detailed documentation are publicly available at: https://github.com/RecSys-lab/RAG-VisualRec.",
+      "categories": [
+        "cs.IR",
+        "cs.MM"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "This paper addresses the challenge of building multimodal recommender systems for the movie domain, where sparse item metadata (e.g., title and genres) can limit retrieval quality ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "tourani2025_rag",
+      "id": "arxiv:2506.20817v2",
+      "arxiv_id": "2506.20817v2",
+      "open_access_url": "https://arxiv.org/pdf/2506.20817v2"
+    },
+    {
+      "index": 2,
+      "title": "CORONA: A Coarse-to-Fine Framework for Graph-based Recommendation with Large Language Models",
+      "authors": "Chen et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Recommender systems (RSs) are designed to retrieve candidate items a user might be interested in from a large pool. A common approach is using graph neural networks (GNNs) to capture high-order interaction relationships. As large language models (LLMs) have shown strong capabilities across domains, researchers are exploring their use to enhance recommendation. However, prior work limits LLMs to re-ranking results or dataset augmentation, failing to utilize their power during candidate filtering - which may lead to suboptimal performance. Instead, we propose to leverage LLMs' reasoning abilities during the candidate filtering process, and introduce Chain Of Retrieval ON grAphs (CORONA) to progressively narrow down the range of candidate items on interaction graphs with the help of LLMs: (1) First, LLM performs preference reasoning based on user profiles, with the response serving as a query to extract relevant users and items from the interaction graph as preference-assisted retrieval; (2) Then, using the information retrieved in the previous step along with the purchase history of target user, LLM conducts intent reasoning to help refine an even smaller interaction subgraph as intent-assisted retrieval; (3) Finally, we employ a GNN to capture high-order collaborative filtering information from the extracted subgraph, performing GNN-enhanced retrieval to generate the final recommendation results. The proposed framework leverages the reasoning capabilities of LLMs during the retrieval process, while seamlessly integrating GNNs to enhance overall recommendation performance. Extensive experiments on various datasets and settings demonstrate that our proposed CORONA achieves state-of-the-art performance with an 18.6% relative improvement in recall and an 18.4% relative improvement in NDCG on average.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Recommender systems (RSs) are designed to retrieve candidate items a user might be interested in from a large pool. A common approach is using graph neural networks (GNNs) to captu",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "chen2025_corona",
+      "id": "arxiv:2506.17281v1",
+      "arxiv_id": "2506.17281v1",
+      "open_access_url": "https://arxiv.org/pdf/2506.17281v1"
+    }
+  ],
+  "push_sequence": 4
+}
