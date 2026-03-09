@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-09",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Selective LLM-Guided Regularization for Enhancing Recommendation Models",
+      "authors": "Shanglin Yang & Zhan Shi",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language models provide rich semantic priors and strong reasoning capabilities, making them promising auxiliary signals for recommendation. However, prevailing approaches either deploy LLMs as standalone recommender or apply global knowledge distillation, both of which suffer from inherent drawbacks. Standalone LLM recommender are costly, biased, and unreliable across large regions of the user item space, while global distillation forces the downstream model to imitate LLM predictions even when such guidance is inaccurate. Meanwhile, recent studies show that LLMs excel particularly in re-ranking and challenging scenarios, rather than uniformly across all contexts.We introduce Selective LLM Guided Regularization, a model-agnostic and computation efficient framework that activates LLM based pairwise ranking supervision only when a trainable gating mechanism informing by user history length, item popularity, and model uncertainty predicts the LLM to be reliable. All LLM scoring is performed offline, transferring knowledge without increasing inference cost. Experiments across multiple datasets show that this selective strategy consistently improves overall accuracy and yields substantial gains in cold start and long tail regimes, outperforming global distillation baselines.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models provide rich semantic priors and strong reasoning capabilities, making them promising auxiliary signals for recommendation. However, prevailing approaches eit",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "yang2025_selective",
+      "id": "arxiv:2512.21526v1",
+      "arxiv_id": "2512.21526v1",
+      "open_access_url": "https://arxiv.org/pdf/2512.21526v1"
+    },
+    {
+      "index": 2,
+      "title": "MADREC: A Multi-Aspect Driven LLM Agent for Explainable and Adaptive Recommendation",
+      "authors": "Jiin Park & Misuk Kim",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Recent attempts to integrate large language models (LLMs) into recommender systems have gained momentum, but most remain limited to simple text generation or static prompt-based inference, failing to capture the complexity of user preferences and real-world interactions. This study proposes the Multi-Aspect Driven LLM Agent MADRec, an autonomous LLM-based recommender that constructs user and item profiles by unsupervised extraction of multi-aspect information from reviews and performs direct recommendation, sequential recommendation, and explanation generation. MADRec generates structured profiles via aspect-category-based summarization and applies Re-Ranking to construct high-density inputs. When the ground-truth item is missing from the output, the Self-Feedback mechanism dynamically adjusts the inference criteria. Experiments across multiple domains show that MADRec outperforms traditional and LLM-based baselines in both precision and explainability, with human evaluation further confirming the persuasiveness of the generated explanations.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Recent attempts to integrate large language models (LLMs) into recommender systems have gained momentum, but most remain limited to simple text generation or static prompt-based in",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "park2025_madrec",
+      "id": "arxiv:2510.13371v1",
+      "arxiv_id": "2510.13371v1",
+      "open_access_url": "https://arxiv.org/pdf/2510.13371v1"
+    }
+  ],
+  "push_sequence": 3
+}
