@@ -1,0 +1,68 @@
+{
+  "date": "2026-03-10",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "VOGUE: A Multimodal Dataset for Conversational Recommendation in Fashion",
+      "authors": "Guo et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Multimodal conversational recommendation has emerged as a promising paradigm for delivering personalized experiences through natural dialogue enriched by visual and contextual grounding. Yet, current multimodal conversational recommendation datasets remain limited: existing resources either simulate conversations, omit user history, or fail to collect sufficiently detailed feedback, all of which constrain the types of research and evaluation they support.\n  To address these gaps, we introduce VOGUE, a novel dataset of 60 humanhuman dialogues in realistic fashion shopping scenarios. Each dialogue is paired with a shared visual catalogue, item metadata, user fashion profiles and histories, and post-conversation ratings from both Seekers and Assistants. This design enables rigorous evaluation of conversational inference, including not only alignment between predicted and ground-truth preferences, but also calibration against full rating distributions and comparison with explicit and implicit user satisfaction signals.\n  Our initial analyses of VOGUE reveal distinctive dynamics of visually grounded dialogue. For example, recommenders frequently suggest items simultaneously in feature-based groups, which creates distinct conversational phases bridged by Seeker critiques and refinements. Benchmarking multimodal large language models against human recommenders shows that while MLLMs approach human-level alignment in aggregate, they exhibit systematic distribution errors in reproducing human ratings and struggle to generalize preference inference beyond explicitly discussed items. These findings establish VOGUE as both a unique resource for studying multimodal conversational systems and as a challenge dataset beyond the current recommendation capabilities of existing top-tier multimodal foundation models such as GPT-4o-mini, GPT-5-mini, and Gemini-2.5-Flash.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Multimodal conversational recommendation has emerged as a promising paradigm for delivering personalized experiences through natural dialogue enriched by visual and contextual grou",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "guo2025_vogue",
+      "id": "arxiv:2510.21151v1",
+      "arxiv_id": "2510.21151v1",
+      "open_access_url": "https://arxiv.org/pdf/2510.21151v1"
+    },
+    {
+      "index": 2,
+      "title": "Modeling shopper interest broadness with entropy-driven dialogue policy in the context of arbitrarily large product catalogs",
+      "authors": "Firas Jarboui & Issa Memari",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Conversational recommender systems promise rich interactions for e-commerce, but balancing exploration (clarifying user needs) and exploitation (making recommendations) remains challenging, especially when deploying large language models (LLMs) with vast product catalogs. We address this challenge by modeling the breadth of user interest via the entropy of retrieval score distributions. Our method uses a neural retriever to fetch relevant items for a user query and computes the entropy of the re-ranked scores to dynamically route the dialogue policy: low-entropy (specific) queries trigger direct recommendations, whereas high-entropy (ambiguous) queries prompt exploratory questions. This simple yet effective strategy allows an LLM-driven agent to remain aware of an arbitrarily large catalog in real-time without bloating its context window.",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Conversational recommender systems promise rich interactions for e-commerce, but balancing exploration (clarifying user needs) and exploitation (making recommendations) remains cha",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "jarboui2025_modeling",
+      "id": "arxiv:2509.06185v1",
+      "arxiv_id": "2509.06185v1",
+      "open_access_url": "https://arxiv.org/pdf/2509.06185v1"
+    }
+  ],
+  "push_sequence": 3
+}
