@@ -1,0 +1,67 @@
+{
+  "date": "2026-03-10",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "RecoWorld: Building Simulated Environments for Agentic Recommender Systems",
+      "authors": "Liu et al.",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "We present RecoWorld, a blueprint for building simulated environments tailored to agentic recommender systems. Such environments give agents a proper training space where they can learn from errors without impacting real users. RecoWorld distinguishes itself with a dual-view architecture: a simulated user and an agentic recommender engage in multi-turn interactions aimed at maximizing user retention. The user simulator reviews recommended items, updates its mindset, and when sensing potential user disengagement, generates reflective instructions. The agentic recommender adapts its recommendations by incorporating these user instructions and reasoning traces, creating a dynamic feedback loop that actively engages users. This process leverages the exceptional reasoning capabilities of modern LLMs. We explore diverse content representations within the simulator, including text-based, multimodal, and semantic ID modeling, and discuss how multi-turn RL enables the recommender to refine its strategies through iterative interactions. RecoWorld also supports multi-agent simulations, allowing creators to simulate the responses of targeted user populations. It marks an important first step toward recommender systems where users and agents collaboratively shape personalized information streams. We envision new interaction paradigms where \"user instructs, recommender responds,\" jointly optimizing user retention and engagement.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "We present RecoWorld, a blueprint for building simulated environments tailored to agentic recommender systems. Such environments give agents a proper training space where they can ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "liu2025_recoworld",
+      "id": "arxiv:2509.10397v2",
+      "arxiv_id": "2509.10397v2",
+      "open_access_url": "https://arxiv.org/pdf/2509.10397v2"
+    },
+    {
+      "index": 2,
+      "title": "The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems",
+      "authors": "Reza Yousefi Maragheh & Yashar Deldjoo",
+      "year": 2025,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language models (LLMs) are rapidly evolving from passive engines of text generation into agentic entities that can plan, remember, invoke external tools, and co-operate with one another. This perspective paper investigates how such LLM agents (and societies thereof) can transform the design space of recommender systems.\n  We introduce a unified formalism that (i) models an individual agent as a tuple comprising its language core, tool set, and hierarchical memory, and (ii) captures a multi-agent recommender as a triple of agents, shared environment, and communication protocol. Within this framework, we present four end-to-end use cases-interactive party planning, synthetic user-simulation for offline evaluation, multi-modal furniture recommendation, and brand-aligned explanation generation-each illustrating a distinct capability unlocked by agentic orchestration.\n  We then surface five cross-cutting challenge families: protocol complexity, scalability, hallucination and error propagation, emergent misalignment (including covert collusion), and brand compliance.\n  For each, we formalize the problem, review nascent mitigation strategies, and outline open research questions. The result is both a blueprint and an agenda: a blueprint that shows how memory-augmented, tool-using LLM agents can be composed into robust recommendation pipelines, and an agenda inviting the RecSys community to develop benchmarks, theoretical guarantees, and governance tools that keep pace with this new degree of autonomy. By unifying agentic abstractions with recommender objectives, the paper lays the groundwork for the next generation of personalized, trustworthy, and context-rich recommendation services.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) are rapidly evolving from passive engines of text generation into agentic entities that can plan, remember, invoke external tools, and co-operate with ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "maragheh2025_future",
+      "id": "arxiv:2507.02097v2",
+      "arxiv_id": "2507.02097v2",
+      "open_access_url": "https://arxiv.org/pdf/2507.02097v2"
+    }
+  ],
+  "push_sequence": 5
+}
