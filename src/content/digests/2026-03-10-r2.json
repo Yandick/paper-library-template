@@ -1,0 +1,67 @@
+{
+  "date": "2026-03-10",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "On the Reliability of User-Centric Evaluation of Conversational Recommender Systems",
+      "authors": "Müller et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "User-centric evaluation has become a key paradigm for assessing Conversational Recommender Systems (CRS), aiming to capture subjective qualities such as satisfaction, trust, and rapport. To enable scalable evaluation, recent work increasingly relies on third-party annotations of static dialogue logs by crowd workers or large language models. However, the reliability of this practice remains largely unexamined. In this paper, we present a large-scale empirical study investigating the reliability and structure of user-centric CRS evaluation on static dialogue transcripts. We collected 1,053 annotations from 124 crowd workers on 200 ReDial dialogues using the 18-dimensional CRS-Que framework. Using random-effects reliability models and correlation analysis, we quantify the stability of individual dimensions and their interdependencies. Our results show that utilitarian and outcome-oriented dimensions such as accuracy, usefulness, and satisfaction achieve moderate reliability under aggregation, whereas socially grounded constructs such as humanness and rapport are substantially less reliable. Furthermore, many dimensions collapse into a single global quality signal, revealing a strong halo effect in third-party judgments. These findings challenge the validity of single-annotator and LLM-based evaluation protocols and motivate the need for multi-rater aggregation and dimension reduction in offline CRS evaluation.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "User-centric evaluation has become a key paradigm for assessing Conversational Recommender Systems (CRS), aiming to capture subjective qualities such as satisfaction, trust, and ra",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "mller2026_reliability",
+      "id": "arxiv:2602.17264v1",
+      "arxiv_id": "2602.17264v1",
+      "open_access_url": "https://arxiv.org/pdf/2602.17264v1"
+    },
+    {
+      "index": 2,
+      "title": "Integrating Vision-Centric Text Understanding for Conversational Recommender Systems",
+      "authors": "Yuan et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Conversational Recommender Systems (CRSs) have attracted growing attention for their ability to deliver personalized recommendations through natural language interactions. To more accurately infer user preferences from multi-turn conversations, recent works increasingly expand conversational context (e.g., by incorporating diverse entity information or retrieving related dialogues). While such context enrichment can assist preference modeling, it also introduces longer and more heterogeneous inputs, leading to practical issues such as input length constraints, text style inconsistency, and irrelevant textual noise, thereby raising the demand for stronger language understanding ability. In this paper, we propose STARCRS, a Screen-Text-AwaRe Conversational Recommender System that integrates two complementary text understanding modes: (1) a screen-reading pathway that encodes auxiliary textual information as visual tokens, mimicking skim reading on a screen, and (2) an LLM-based textual pathway that focuses on a limited set of critical content for fine-grained reasoning. We design a knowledge-anchored fusion framework that combines contrastive alignment, cross-attention interaction, and adaptive gating to integrate the two modes for improved preference modeling and response generation. Extensive experiments on two widely used benchmarks demonstrate that STARCRS consistently improves both recommendation accuracy and generated response quality.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Conversational Recommender Systems (CRSs) have attracted growing attention for their ability to deliver personalized recommendations through natural language interactions. To more ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "yuan2026_integrating",
+      "id": "arxiv:2601.13505v1",
+      "arxiv_id": "2601.13505v1",
+      "open_access_url": "https://arxiv.org/pdf/2601.13505v1"
+    }
+  ],
+  "push_sequence": 2
+}

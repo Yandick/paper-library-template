@@ -1,0 +1,67 @@
+{
+  "date": "2026-03-10",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Verifiable Reasoning for LLM-based Generative Recommendation",
+      "authors": "Lin et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Reasoning in Large Language Models (LLMs) has recently shown strong potential in enhancing generative recommendation through deep understanding of complex user preference. Existing approaches follow a {reason-then-recommend} paradigm, where LLMs perform step-by-step reasoning before item generation. However, this paradigm inevitably suffers from reasoning degradation (i.e., homogeneous or error-accumulated reasoning) due to the lack of intermediate verification, thus undermining the recommendation. To bridge this gap, we propose a novel \\textbf{\\textit{reason-verify-recommend}} paradigm, which interleaves reasoning with verification to provide reliable feedback, guiding the reasoning process toward more faithful user preference understanding. To enable effective verification, we establish two key principles for verifier design: 1) reliability ensures accurate evaluation of reasoning correctness and informative guidance generation; and 2) multi-dimensionality emphasizes comprehensive verification across multi-dimensional user preferences. Accordingly, we propose an effective implementation called VRec. It employs a mixture of verifiers to ensure multi-dimensionality, while leveraging a proxy prediction objective to pursue reliability. Experiments on four real-world datasets demonstrate that VRec substantially enhances recommendation effectiveness and scalability without compromising efficiency. The codes can be found at https://github.com/Linxyhaha/Verifiable-Rec.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Introduces a verifiable reasoning framework to make LLM-based generative recommendation more reliable and preference-aware.",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Directly targets LLM-based generative recommendation and emphasizes verifiable reasoning, which is highly aligned with current LLM4Rec research directions.",
+      "citekey": "lin2026_verifiable",
+      "id": "arxiv:2603.07725v1",
+      "arxiv_id": "2603.07725v1",
+      "open_access_url": "https://arxiv.org/pdf/2603.07725v1"
+    },
+    {
+      "index": 2,
+      "title": "MLLMRec-R1: Incentivizing Reasoning Capability in Large Language Models for Multimodal Sequential Recommendation",
+      "authors": "Wang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Group relative policy optimization (GRPO) has become a standard post-training paradigm for improving reasoning and preference alignment in large language models (LLMs), and has recently shown strong effectiveness in LLM-based recommender systems. However, extending GRPO-based reasoning pipelines to multimodal sequential recommendation (MSR) with multimodal large language models (MLLMs) faces fundamental obstacles. First, MSR requires jointly encoding visual content for both historical interactions and multiple candidate items, causing visual tokens to dominate the input and making the cost of group-based rollout scale with history length and candidate set size, which renders GRPO-based training prohibitively expensive. Second, existing Chain-of-Thought (CoT) supervision suffers from reward inflation in recommendation scenarios, where higher training rewards do not reliably translate into improved ranking performance and may induce shortcut learning. To address these challenges, we propose MLLMRec-R1, an efficient and stable GRPO-based reasoning framework for multimodal sequential recommendation. MLLMRec-R1 textualizes visual signals offline to eliminate expensive visual tokens while preserving multimodal semantics, and constructs high-quality multimodal CoT supervision through refinement and confidence-aware assessment. Furthermore, a mixed-grained data augmentation strategy selectively injects reliable CoT samples while retaining standard training data, mitigating reward inflation and improving generalization stability. Extensive experiments on three benchmark datasets demonstrate that MLLMRec-R1 consistently outperforms state-of-the-art methods, establishing a practical and effective GRPO-based reasoning pipeline for multimodal sequential recommendation. The code is available at https://github.com/wangyu0627/MLLMRec-R1.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Uses reasoning-oriented post-training to strengthen multimodal sequential recommendation with large language models.",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Highly relevant to reasoning-enhanced multimodal sequential recommendation with LLM post-training, matching the user’s focus on recent LLM-based recommendation methods.",
+      "citekey": "wang2026_mllmrec",
+      "id": "arxiv:2603.06243v1",
+      "arxiv_id": "2603.06243v1",
+      "open_access_url": "https://arxiv.org/pdf/2603.06243v1"
+    }
+  ],
+  "push_sequence": 1
+}
