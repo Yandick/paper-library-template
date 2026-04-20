@@ -1,0 +1,68 @@
+{
+  "date": "2026-04-20",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "ChainRec: An Agentic Recommender Learning to Route Tool Chains for Diverse and Evolving Interests",
+      "authors": "Li et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language models (LLMs) are increasingly integrated into recommender systems, motivating recent interest in agentic and reasoning-based recommendation. However, most existing approaches still rely on fixed workflows, applying the same reasoning procedure across diverse recommendation scenarios. In practice, user contexts vary substantially-for example, in cold-start settings or during interest shifts, so an agent should adaptively decide what evidence to gather next rather than following a scripted process. To address this, we propose ChainRec, an agentic recommender that uses a planner to dynamically select reasoning tools. ChainRec builds a standardized Tool Agent Library from expert trajectories. It then trains a planner using supervised fine-tuning and preference optimization to dynamically select tools, decide their order, and determine when to stop. Experiments on AgentRecBench across Amazon, Yelp, and Goodreads show that ChainRec consistently improves Avg HR@{1,3,5} over strong baselines, with especially notable gains in cold-start and evolving-interest scenarios. Ablation studies further validate the importance of tool standardization and preference-optimized planning.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) are increasingly integrated into recommender systems, motivating recent interest in agentic and reasoning-based recommendation. However, most existing ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "li2026_chainrec",
+      "id": "arxiv:2602.10490v1",
+      "arxiv_id": "2602.10490v1",
+      "open_access_url": "https://arxiv.org/pdf/2602.10490v1"
+    },
+    {
+      "index": 2,
+      "title": "AMEM4Rec: Leveraging Cross-User Similarity for Memory Evolution in Agentic LLM Recommenders",
+      "authors": "Nguyen et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Agentic systems powered by Large Language Models (LLMs) have shown strong potential in recommender systems but remain hindered by several challenges. Fine-tuning LLMs is parameter-inefficient, and prompt-based agentic reasoning is limited by context length and hallucination risk. Moreover, existing agentic recommendation systems predominantly leverages semantic knowledge while neglecting the collaborative filtering (CF) signals essential for implicit preference modeling. To address these limitations, we propose AMEM4Rec, an agentic LLM-based recommender that learns collaborative signals in an end-to-end manner through cross-user memory evolution. AMEM4Rec stores abstract user behavior patterns from user histories in a global memory pool. Within this pool, memories are linked to similar existing ones and iteratively evolved to reinforce shared cross-user patterns, enabling the system to become aware of CF signals without relying on a pre-trained CF model. Extensive experiments on Amazon and MIND datasets show that AMEM4Rec consistently outperforms state-of-the-art LLM-based recommenders, demonstrating the effectiveness of evolving memory-guided collaborative filtering.",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Agentic systems powered by Large Language Models (LLMs) have shown strong potential in recommender systems but remain hindered by several challenges. Fine-tuning LLMs is parameter-",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "nguyen2026_amem",
+      "id": "arxiv:2602.08837v1",
+      "arxiv_id": "2602.08837v1",
+      "open_access_url": "https://arxiv.org/pdf/2602.08837v1"
+    }
+  ],
+  "push_sequence": 4
+}
