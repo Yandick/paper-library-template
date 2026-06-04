@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-04",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "ExpWeaver: LLM Agents Learn from Experience via Latent RAG",
+      "authors": "Feng et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Experience learning has achieved promising results in enhancing LLM agent planning and reasoning by integrating past interactions as reusable knowledge. However, existing methods remain confined to explicit text space, retrieving experiences via semantic similarity and concatenating them into the context window, leading to substantial token overhead and a decoupled architecture that separates retrieval from generation. To address these limitations, we propose ExpWeaver, a framework that enables LLM agents to learn from experience via latent retrieval-augmented generation, without requiring a separate RAG module. ExpWeaver encodes experiences using the LLM's own hidden states, retrieves relevant experiences directly in latent space at each decoding step, and integrates them through cross-attention aggregation and gated residual mechanisms. The entire pipeline is optimized end-to-end with reinforcement learning, supporting both generative and ranking tasks. We evaluate ExpWeaver on 13 diverse tasks spanning question answering, reasoning, coding, scientific prediction, and recommendation. Results demonstrate that ExpWeaver achieves state-of-the-art performance on 12 out of 13 tasks, outperforming the strongest baseline by over 6.8%; maintains token efficiency comparable to non-retrieval baselines while text-based retrieval methods require 1.5 to 2 times more tokens; and exhibits superior cross-domain generalization, outperforming the strongest baseline by 16.32% under zero-shot transfer and 15.21% under few-shot transfer. Our code for ExpWeaver is released at https://github.com/ulab-uiuc/ExpWeaver.",
+      "categories": [
+        "cs.CL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Experience learning has achieved promising results in enhancing LLM agent planning and reasoning by integrating past interactions as reusable knowledge. However, existing methods r",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "feng2026_expweaver",
+      "id": "arxiv:2606.01041v1",
+      "arxiv_id": "2606.01041v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.01041v1"
+    },
+    {
+      "index": 2,
+      "title": "FinCom: A Financial Multi-Agent Demo with Disagree-or-Commit Deliberation",
+      "authors": "Yang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Multi-agent systems powered by large language models (LLMs) are increasingly used for financial analysis and decision support. However, existing coordination schemes, especially those emphasizing consensus or debate, are vulnerable to sycophancy: agents conform to peer reasoning instead of evidence, leading to premature agreement and degraded outcomes. We introduce FinCom (Financial Committee), a governed multi-agent framework and interactive system that operationalizes the Disagree-or-Commit (DoC) protocol to embed structured dissent into financial AI committees. A central Supervisor orchestrates three ReAct-enabled specialist agents: Research, Quantitative, and Risk. Each agent is equipped with role-specific tools for retrieval, computation, and stress testing. During deliberation, agents must either explicitly critique or commit to their peers' reasoning before converging on a unified recommendation.\n  This demonstration showcases how FinCom supports committee-style financial analysis through coordinated multi-agent interaction, including structured report generation and interactive decision support. Evaluated across the most recent financial agent benchmark, in addition to 90 internal handcrafted financial tasks using an LLM-as-a-Judge protocol, DoC improves reasoning accuracy and risk awareness significantly over a consensus-seeking baseline on both an in-house and external evaluation set. By reframing disagreement as a governance primitive rather than noise, FinCom offers a lightweight, prompt-only recipe for improving accountability, transparency, and epistemic robustness in agentic financial systems.",
+      "categories": [
+        "cs.MA"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Multi-agent systems powered by large language models (LLMs) are increasingly used for financial analysis and decision support. However, existing coordination schemes, especially th",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "yang2026_fincom",
+      "id": "arxiv:2606.00939v1",
+      "arxiv_id": "2606.00939v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.00939v1"
+    }
+  ],
+  "push_sequence": 4
+}
