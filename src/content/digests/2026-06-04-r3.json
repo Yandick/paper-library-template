@@ -1,0 +1,68 @@
+{
+  "date": "2026-06-04",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Breaking the Information Silo: Semantic Personas for Cross-Domain Recommendation",
+      "authors": "Mayo et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Digital platforms increasingly operate as isolated information silos, limiting their ability to construct comprehensive user representations across domains. Cross-domain recommender systems seek to overcome this limitation by transferring knowledge from a source domain to a target domain, yet most existing approaches depend on shared users, shared items, or structurally similar interaction graphs. These assumptions are often unrealistic across independent platforms. We propose SPHERE (Semantic Personas for Heterogeneous cross-domain Recommendation), a design artifact that enables recommendation knowledge transfer across strictly disjoint domains with no shared users or items. Rather than aligning domains through identity or graph structure, SPHERE uses large language models to induce a shared behavioral vocabulary, generate structured semantic personas for users, and retrieve behaviorally similar source-domain communities that form a Community Source Persona. This semantic signal is integrated with collaborative signals through a dual-tower architecture and dynamic fusion gate, allowing SPHERE to augment standard recommender backbones. Empirical evaluation across Amazon Books, Goodreads, and Steam demonstrates consistent improvements over NCF, SVD++, and LightGCN baselines under full-ranking evaluation. The results show that cross-domain transfer effectiveness is not determined solely by semantic proximity between domains; rather, it depends critically on the structural density and native predictive strength of the target domain. The study contributes to information systems research by reframing cross-domain personalization as behavior-based semantic alignment, offering a practical mechanism for overcoming information silos while preserving interpretability and modularity.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Digital platforms increasingly operate as isolated information silos, limiting their ability to construct comprehensive user representations across domains. Cross-domain recommende",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "mayo2026_breaking",
+      "id": "arxiv:2606.01783v1",
+      "arxiv_id": "2606.01783v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.01783v1"
+    },
+    {
+      "index": 2,
+      "title": "A literature-grounded scientific reasoning framework for defect-engineered TiO$_{2}$ photocatalysts",
+      "authors": "F. J. Dominguez-Gutierrez & E. Wierzbicka",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Defect-engineered TiO$_2$ photocatalysts are extensively investigated for photocatalytic hydrogen evolution; however, the highly heterogeneous nature of the literature, including inconsistent descriptors, diverse synthesis protocols, non-uniform activity metrics, and incomplete mechanistic reporting, limits the applicability of conventional machine-learning approaches based solely on statistical regression. Here, we present a literature-grounded large language model (LLM)-assisted scientific reasoning framework for defect-engineered TiO$_2$ photocatalysts integrating curated literature data, mechanistic rule extraction, and retrieval-augmented reasoning. A harmonized database was constructed from experimentally relevant publications specifically selected for hydrogen-evolution-related defect engineering in TiO$_2$, covering polymorph-dependent behavior, hydrogenation conditions, Ti$^{3+}$ defect states, oxygen vacancies, illumination conditions, and photocatalytic activity descriptors. In parallel, mechanistic evidence sentences and publications-defined scientific rules were encoded into a structured reasoning layer enabling explainable inference beyond black-box prediction. The resulting framework combines structured experimental descriptors, semantic literature retrieval, and mechanistic interpretation to generate confidence-aware recommendations for optimal defect-engineering conditions. For example, the AI agent identified a consistent optimal anatase hydrogenation window centered at ~500 $°$C under H$_2$-containing atmospheres for approximately 1 h, supported by mechanistic evidence linking balanced Ti$^{3+}$/oxygen-vacancy populations with enhanced photocatalytic hydrogen evolution.",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Defect-engineered TiO$_2$ photocatalysts are extensively investigated for photocatalytic hydrogen evolution; however, the highly heterogeneous nature of the literature, including i",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "dominguezgutierrez2026_literature",
+      "id": "arxiv:2606.01089v1",
+      "arxiv_id": "2606.01089v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.01089v1"
+    }
+  ],
+  "push_sequence": 3
+}
