@@ -1,0 +1,68 @@
+{
+  "date": "2026-06-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "LLM-Guided ANN Index Optimization for Human-Object Interaction Retrieval",
+      "authors": "Esmat et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Retrieval systems underpin modern AI applications -- spanning visual search, recommendation engines, and multi-modal question answering. Modern multi-stage retrieval systems require the joint optimization of highly coupled parameters, yet traditional hyperparameter optimization (HPO) methods -- including Tree-structured Parzen Estimators (TPE) and Gaussian Process Bayesian Optimization -- rely on an independence assumption that fundamentally prevents them from navigating these coupled configuration spaces. We address this limitation with a phase-aware large language model (LLM) agent that conditions each proposal on its full optimization history, navigating the coupled parameter space across phase-partitioned exploration, exploitation, and fine-tuning stages. Evaluated on the HICO-DET human-object interaction retrieval benchmark using Intel VDMS (Visual Data Management System), our agent outperforms Optuna TPE by +33.3% and VDTuner by +34.2% under SIEVE (Safeguarded Index Evaluation of Vector-search Efficiency, a quality-constrained throughput metric), delivering a 15.3x throughput gain over UniIR. Validation across three benchmarks confirms that the agent's advantage grows with the degree of parameter coupling: +33.3% on HICO-DET (high coupling), methods converge within 1% on GLDv2 (moderate coupling) and within 3.6% on SIFT1M (near-independent control). Cross-system validation on Milvus confirms the optimizer ranks first on all three datasets without modification, demonstrating transferability across vector database management system (VDBMS) platforms.",
+      "categories": [
+        "cs.CV",
+        "cs.DB"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Retrieval systems underpin modern AI applications -- spanning visual search, recommendation engines, and multi-modal question answering. Modern multi-stage retrieval systems requir",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "esmat2026_llm",
+      "id": "arxiv:2606.05489v1",
+      "arxiv_id": "2606.05489v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.05489v1"
+    },
+    {
+      "index": 2,
+      "title": "Trading Engagement for Sustainability: Carbon-Aware Re-ranking for E-commerce Recommendations",
+      "authors": "Syrdal et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "E-commerce recommender systems strongly influence which products users consider and purchase, yet sustainability signals such as Product Carbon Footprint (PCF) are almost never available at catalog scale. We study carbon-aware product recommendation in the realistic setting where PCF labels are missing for most items and must be inferred. We first estimate product-level carbon footprints via a retrieval-augmented PCF estimation pipeline that transfers supervision from the Carbon Catalogue, a small set of life-cycle-assessed products, to a large unlabeled e-commerce catalog using semantic similarity search, few-shot LLM prompting, and a nearest-neighbour fallback. We then apply a carbon-aware post-hoc re-ranking strategy on top of relevance scores produced by three established recommendation models: BPR, NeuMF, and LightGCN. The method trades off predicted user-item engagement against estimated carbon footprint through a single tunable parameter, lambda. In this offline study, engagement is operationalized through Amazon review interactions, which serve as implicit feedback and as a proxy for user interest or purchase behavior. We evaluate the framework on the Amazon Reviews dataset across three product categories: Home and Kitchen, Sports and Outdoors, and Electronics. By sweeping lambda, we construct Pareto frontiers that characterize the achievable engagement and carbon trade-off for each model and category. Substantial carbon reductions are achievable at minimal engagement cost across all models and categories. However, the available carbon headroom varies by model and category, underscoring the importance of model choice and domain context.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "E-commerce recommender systems strongly influence which products users consider and purchase, yet sustainability signals such as Product Carbon Footprint (PCF) are almost never ava",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "syrdal2026_trading",
+      "id": "arxiv:2606.04550v1",
+      "arxiv_id": "2606.04550v1",
+      "open_access_url": "https://arxiv.org/pdf/2606.04550v1"
+    }
+  ],
+  "push_sequence": 1
+}
