@@ -1,0 +1,68 @@
+{
+  "date": "2026-06-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization",
+      "authors": "Wu et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Modern large-scale recommendation systems are typically constructed as multi-stage pipelines, encompassing pre-ranking, ranking, and re-ranking phases. While traditional recommendation research typically focuses on optimizing a specific model, such as improving the pre-ranking model structure or ranking models training algorithm, system-level configurations optimization play a crucial role, which integrates the output from each model head to get the final score in each stage. Due to the complexity of the system, the configuration optimization is highly important and challenging. Any model modification requires new optimal system-level configurations. But each experimental iteration requires significant tuning effort. Furthermore, models in different stage operates within a distinct context and optimizes for different targets, requiring specialized domain expertise. In addition, optimization success depends on balancing competing multiple online metrics and alignment with shifting production development objectives. To address these challenges, we propose AgenticRecTune, an agentic framework comprising five specialized agents, Actor, Critic, Insight, Skill, and Online, designed to manage the end-to-end configuration optimization workflow. By leveraging the advanced reasoning of Large Language Models (LLMs), specifically Gemini, AgenticRecTune explore the optimal configuration spaces. The Actor Agent proposes multiple candidates and Critic Agent filters out suboptimal proposals.Then Online Agent autonomously prepares A/B tests based on the proposed configurations set from the Critic Agent and captures the subsequencet experimental results. We also introduce a self-evolving Skillhub, which utilizes a collaboration between the Insight Agent and Skill Agent to summarize the history results, extract underlying mechanics of each task in recommendation system and update skills.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Modern large-scale recommendation systems are typically constructed as multi-stage pipelines, encompassing pre-ranking, ranking, and re-ranking phases. While traditional recommenda",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "wu2026_agenticrectune",
+      "id": "arxiv:2604.26969v2",
+      "arxiv_id": "2604.26969v2",
+      "open_access_url": "https://arxiv.org/pdf/2604.26969v2"
+    },
+    {
+      "index": 2,
+      "title": "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+      "authors": "He et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "The rapid expansion of the model context protocol (MCP) ecosystem enables large language model (LLM)-based agents to access a wide range of external tools via a standardized interface. However, identifying appropriate MCP servers for a specific development task remains challenging. Existing studies primarily focus on measuring the MCP ecosystem or optimizing tool invocation mechanisms, while systematic recommendation frameworks and reproducible benchmarks for real-world development tasks remain largely unexplored. To address this limitation, we formulate task-oriented MCP server recommendation as a structured retrieval-and-ranking problem that jointly considers semantic relevance and engineering constraints. We first construct Task2MCP, a task-centered dataset that systematically associates taxonomy-grounded development tasks with curated MCP servers. This dataset provides structured supervision and a reproducible evaluation environment for research on MCP tool recommendations. Building on this dataset, we propose T2MRec, a task-to-MCP server recommendation model. It models semantic relevance and structural compatibility to construct an initial candidate set. Then it improves coverage and ranking quality through centroid-based candidate expansion and constrained LLM-based re-ranking. In addition, we design and implement an interactive MCP server recommendation agent prototype that operates in conversational environments to support dynamic decision-making. The agent assists developers in efficiently evaluating and integrating tools by providing recommended MCP servers together with usage guidelines.",
+      "categories": [
+        "cs.SE"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "The rapid expansion of the model context protocol (MCP) ecosystem enables large language model (LLM)-based agents to access a wide range of external tools via a standardized interf",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "he2026_language",
+      "id": "arxiv:2604.17234v1",
+      "arxiv_id": "2604.17234v1",
+      "open_access_url": "https://arxiv.org/pdf/2604.17234v1"
+    }
+  ],
+  "push_sequence": 4
+}
