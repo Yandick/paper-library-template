@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-08",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "How Personal Characteristics Shape User Exploration of Diverse Movie Recommendations with a LLM-Based Multi-Agent System",
+      "authors": "Zhou et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Diversity is an important evaluation criterion for recommender systems beyond accuracy, yet users differ in their willingness to engage with novel and diverse content. In this work, we investigate how a Large Language Model (LLM)-based multi-agent system supports users' exploration of diverse recommendations, and how individual characteristics shape user experiences. We conducted a between-subjects user study (N = 100) comparing a single-agent system (baseline) with a multi-agent system for movie recommendations. We measured Perceived Accuracy, diversity, novelty, and overall rating, and examined the influence of personal characteristics, including personality traits, demographics, GenAI recommendation experience, and GenAI skepticism. Results show that the multi-agent system significantly increases Perceived Novelty and Shannon Diversity. Conscientiousness is positively associated with Perceived Accuracy and diversity, whereas extraversion is negatively associated with Perceived Diversity. Prior experience with GenAI-based recommendations is positively associated with Shannon Diversity, while skepticism toward GenAI is negatively associated with it. We also observe significant interaction effects between system design and user characteristics. These findings highlight the importance of personality-aware conversational recommender systems and caution against one-size-fits-all multi-agent designs.",
+      "categories": [
+        "cs.HC"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Diversity is an important evaluation criterion for recommender systems beyond accuracy, yet users differ in their willingness to engage with novel and diverse content. In this work",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "zhou2026_how",
+      "id": "arxiv:2604.24405v2",
+      "arxiv_id": "2604.24405v2",
+      "open_access_url": "https://arxiv.org/pdf/2604.24405v2"
+    },
+    {
+      "index": 2,
+      "title": "Retrieval Augmented Conversational Recommendation with Reinforcement Learning",
+      "authors": "Yue et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language models (LLMs) exhibit enhanced capabilities in language understanding and generation. By utilizing their embedded knowledge, LLMs are increasingly used as conversational recommender systems (CRS), achieving improved performance across diverse scenarios. However, existing LLM-based methods rely on pretrained knowledge without external retrieval mechanisms for novel items. Additionally, the lack of a unified corpus poses challenges for integrating retrieval augmentation into CRS. Motivated by these challenges, we present RAR, a novel two-stage retrieval augmented conversational recommendation framework that aligns retrieval and generation to enhance both performance and factuality. To support this framework and provide a unified corpus, we construct a large-scale movie corpus, comprising over 300k movies with rich metadata, such as titles, casts and plot summaries. Leveraging this data, our primary contribution is RAR, the first framework to departs from standard two-stage CRS by dynamically bridging retrieval and generation. First, a retriever model generates candidate items based on user history; in the subsequent stage, an LLM refines the recommendations by incorporating conversational context with retrieved results. In addition, we introduce a novel reinforcement learning (RL) method that leverages LLM feedback to iteratively update the retriever. By creating a collaborative feedback loop that reinforces sampled candidate sets with higher ranking metrics, RAR effectively mitigates the misalignment between the retrieval and generation stages. Furthermore, grounding the LLM in factual metadata allows our RL-driven approach to capture subtle user intentions and generate context-aware recommendations with reduced hallucinations. We validate our approach through extensive experiments on multiple benchmarks, where RAR consistently outperforms state-of-the-art baseline methods.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) exhibit enhanced capabilities in language understanding and generation. By utilizing their embedded knowledge, LLMs are increasingly used as conversati",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "yue2026_retrieval",
+      "id": "arxiv:2604.04457v2",
+      "arxiv_id": "2604.04457v2",
+      "open_access_url": "https://arxiv.org/pdf/2604.04457v2"
+    }
+  ],
+  "push_sequence": 3
+}
