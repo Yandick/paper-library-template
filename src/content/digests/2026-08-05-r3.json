@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-05",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Structure-Aware Semantic Chunking with Title-Chain Prefixes: A 1600-Query Evaluation and the Measurement Trap in Text-Transform Ablations",
+      "authors": "Yang Yang",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Chunking is the first and most consequential step in retrieval-augmented generation (RAG): every downstream retrieval decision inherits the chunk boundaries. We present a three-stage, chunk-side-only semantic chunking pipeline---header-split, semantic merge, and title-chain prefixing---that costs zero additional LLM calls: the title chain reuses the document's own header hierarchy instead of a generated summary. On a 1600-query stratified evaluation over a production Markdown knowledge base, the pipeline improves MRR@5 from 0.374 to 0.463 (+23.8%) on the full set and from 0.828 to 0.925 (+11.7%) on the answerable subset (n=563), with dual-annotator Cohen's kappa 0.45 (unweighted, 16,000 score pairs). We then report what we tried and what failed: three query-side or architecture-level follow-ups are design dead ends (unevaluated---no comparable run artifacts), one measured failure (prefix weight decay), and one protocol-level failure that is the paper's central methodological finding. In a same-pool prefix on/off ablation, dual-annotator agreement collapsed from kappa 0.45 to 0.04 under identical prompts---stripping the title-chain context strips the disambiguation signal annotators need to agree on relevance. This measurement trap invalidates a common evaluation practice in chunking research and motivates retrieval-time per-candidate prefix evaluation, the direction we recommend from all our evidence.",
+      "categories": [
+        "cs.SE"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Chunking is the first and most consequential step in retrieval-augmented generation (RAG): every downstream retrieval decision inherits the chunk boundaries. We present a three-sta",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "yang2026_structure",
+      "id": "arxiv:2608.00824v1",
+      "arxiv_id": "2608.00824v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.00824v1"
+    },
+    {
+      "index": 2,
+      "title": "GARDRec: Decision-Level Graph Grounding for Large Language Model Recommendation",
+      "authors": "Wang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language models (LLMs) offer new opportunities for recommendation by interpreting item descriptions, user instructions, and external knowledge through natural-language prompts. However, existing graph-augmented LLM recommenders often use knowledge graphs mainly as prompt-level evidence, leaving ranking decisions weakly constrained by structured user-item relations. This is problematic for next-item recommendation, where the model must compare candidates under the same user context while preserving temporal preference, collaborative signals, and attribute matches. To address this issue, we propose \\emph{GARDRec}, a Graph-grounded Adaptive Reasoning and Decision-aware Recommendation framework for LLM-based next-item ranking. GARDRec constructs semantic-structural item representations from textual node features and graph propagation, derives personalized graph contexts from temporally weighted histories and first-order neighborhoods, and aligns graph-derived representations with a frozen LLM through continuous multimodal prompts. Explicit interaction and matching features are injected through late-stage decision branches, while inter-candidate attention and restricted generative likelihood support final ranking. Experiments on three public benchmarks with multiple LLM backbones show that GARDRec generally improves candidate-ranking performance over representative baselines. Ablation and diagnostic analyses verify the contributions of graph projection, neighborhood retrieval, explicit decision features, ranking loss, and generative calibration.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language models (LLMs) offer new opportunities for recommendation by interpreting item descriptions, user instructions, and external knowledge through natural-language prompt",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "wang2026_gardrec",
+      "id": "arxiv:2608.00669v1",
+      "arxiv_id": "2608.00669v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.00669v1"
+    }
+  ],
+  "push_sequence": 3
+}
