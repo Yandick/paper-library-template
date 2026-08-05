@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-05",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "LLM-Based Generative Retrieval for Snapchat Content Recommendation",
+      "authors": "Collins et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Pretrained large language models (LLMs) are promising retrieval engines because they combine rich semantic priors, strong sequence modeling capabilities, and favorable scaling behavior. However, turning a pretrained LLM into a generative retriever in production deployment raises several challenges: the model must learn an internal item vocabulary that was absent from pretraining, and generate valid item identifiers under strict latency and cost constraints. We address these challenges through the design and launch of SnapLGR, an LLM-based generative retrieval system for short-video recommendation at Snapchat. The system is built around three main designs. First, we construct semantic identifiers (SIDs) from multimodal item embeddings and enhance them with Personalized PageRank (PPR)-based co-engagement contrastive learning, resulting in improved codebook utilization, reduced collisions, and infused collaborative signal. Second, we use continued pretraining (CPT) to ground the introduced SID tokens before supervised fine-tuning (SFT) on user interaction sequences. Third, we make SnapLGR serving practical through TensorRT-LLM CUDA-backed beam search and a decentralized worker-loop architecture. In a live A/B test, the launched system increased View Time by 0.37%, Time Spent by 0.09%, Deep Sessions by 0.18%, and Deep Sessions Unique User by 0.11% relative to the existing TIGER-style generative retrieval baseline. We then decompose this offline gap under a fixed tokenizer and quantify the gains due to model architecture, scaling, and pretraining. Overall, our deployment shows that successful production SnapLGR requires joint design across representation learning, vocabulary grounding, and efficient training and serving.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Pretrained large language models (LLMs) are promising retrieval engines because they combine rich semantic priors, strong sequence modeling capabilities, and favorable scaling beha",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "collins2026_llm",
+      "id": "arxiv:2607.28895v1",
+      "arxiv_id": "2607.28895v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.28895v1"
+    },
+    {
+      "index": 2,
+      "title": "Interpretable Representation via LLM-Driven Generative Disentanglement for Local-Life Service Recommendation",
+      "authors": "Zhang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "While large language models (LLMs) have advanced ID-based recommendation through Semantic ID (SID) modeling, existing SID generation frameworks largely follow a single-representation-then-quantization paradigm. This design faces two bottlenecks: semantic entanglement mixes heterogeneous attributes, such as geography, brand, and category, causing information loss during quantization, low-quality SIDs, and severe collisions; moreover, black-box representation learning provides neither explicit attribute semantics nor clear geographic or semantic meanings for SID positions. These limitations weaken both retrieval reliability and the ability to diagnose or control SID generation. We propose Interpretable Representation via LLM-Driven Generative Disentanglement for Local-Life Service Recommendation (LGRID). LGRID introduces a generative disentanglement paradigm through an Encode -> Disentangle -> Align -> Quantize pipeline. It first uses joint LLM encoding to preserve cross-attribute geographic-semantic dependencies, rather than encoding fields independently. A Structured Disentangled Block then routes hidden states into attribute-aligned slots for geographic and semantic factors. Synergistic Alignment Learning makes these slots both generatively decodable and discriminative for retrieval, while Dual-Stream Residual Quantization separately discretizes the two streams into compact SIDs with explicit attribute correspondence. This design yields interpretable SIDs with positions grounded in item attributes and local-service semantics. Experiments on Kuaishou and Foursquare show that LGRID consistently outperforms strong SID baselines, achieving up to a 5.44 percent relative AUC gain. It also achieves over 99 percent attribute-decoding accuracy for coarse geographic fields and reduces the full-SID collision rate to 39.9 percent, compared with 97.0 percent for LGSID.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "While large language models (LLMs) have advanced ID-based recommendation through Semantic ID (SID) modeling, existing SID generation frameworks largely follow a single-representati",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "zhang2026_interpretable",
+      "id": "arxiv:2607.27944v1",
+      "arxiv_id": "2607.27944v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.27944v1"
+    }
+  ],
+  "push_sequence": 5
+}
