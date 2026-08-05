@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-05",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "RecHarness: A Bandit-Routed Agentic Harness for Self-Evolving Recommender Systems",
+      "authors": "Ling et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Optimizing modern recommender models still depends heavily on engineers manually iterating over architectural, objective, and training-strategy changes. While LLM-based agents can automate this trial-and-error process, allowing the LLM to both select modification directions and generate concrete hypotheses often leads to unstable search under limited experiment budgets. Inspired by the above challenge, we propose RecHarness, a Bandit-Routed Agentic Harness for automated recommender model optimization. RecHarness separates the optimization process into two steps: a bandit router selects the next modification direction according to historical validation feedback, while the LLM generates a concrete optimization hypothesis and executable code edit within the selected direction. To sustain long-horizon exploration, RecHarness uses a jump-basin mechanism to activate a structural-jump arm when local edits stagnate. Across multiple recommendation tasks, datasets, and model backbones, RecHarness achieves more stable performance improvements and uses limited trial budgets more effectively than LLM-reasoning search. During a 7-day online A/B test on a large-scale short-video advertising platform, the selected candidate improves ADVV by 2.084%, Revenue by 0.534%, and Exposure by 0.559%. Code is available at https://github.com/6lyc/RecHarness.",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Optimizing modern recommender models still depends heavily on engineers manually iterating over architectural, objective, and training-strategy changes. While LLM-based agents can ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "ling2026_recharness",
+      "id": "arxiv:2607.29241v1",
+      "arxiv_id": "2607.29241v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.29241v1"
+    },
+    {
+      "index": 2,
+      "title": "Think2Go: Generative Next POI Recommendation with LLM Reasoning",
+      "authors": "Zhuang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Next Point-of-Interest (POI) recommendation task focuses on mining user behavioral preference patterns from historical check-ins to provide personalized suggestions for the next destination. Existing methods primarily rely on shallow contextual information and handcrafted feature interactions to predict the next POI. However, the inherent sparsity and complexity of user mobility patterns limit the computational capacity of non-reasoning models to capture deep intent, while large language models (LLMs) perform suboptimally because they lack a deep understanding of semantic IDs (SIDs) when SIDs are trained separately. To address these limitations, we propose Think2Go, a novel generative next POI recommendation framework, which enhances the model's comprehension of SID representations and explores diverse spatial-temporal patterns via test-time computational scaling. We unify supervised fine-tuning (SFT) and reinforcement learning (RL)-based reasoning within a single architecture, enabling joint optimization of memorization and adaptive reasoning to better retain user behavior patterns while exploring diverse user preferences. To further calibrate policy optimization in adaptive reasoning, we propose two advantage weighting mechanisms that integrate (1) prompt epistemic uncertainty, estimated via kernel density methods to assess the spatial-temporal periodic pattern alignment between queries and user history, promoting increased exploration under high epistemic uncertainty; and (2) reward-informed advantage scaling, captured by normalizing rewards against their maxima to adapt update magnitudes, thereby improving training stability and mitigating overfitting to noisy signals. This joint calibration forms an implicit curriculum learning strategy, delivering fine-grained, instance-aware policy updates that prevent entropy collapse and support robust exploration.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Next Point-of-Interest (POI) recommendation task focuses on mining user behavioral preference patterns from historical check-ins to provide personalized suggestions for the next de",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "zhuang2026_think",
+      "id": "arxiv:2607.28997v1",
+      "arxiv_id": "2607.28997v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.28997v1"
+    }
+  ],
+  "push_sequence": 4
+}
