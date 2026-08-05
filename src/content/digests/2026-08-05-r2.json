@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-05",
+  "paper_count": 1,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Tevatron Meets Megatron: Expert-Parallel LLM Reranker Training on an Academic Budget",
+      "authors": "Xu et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Modern reranking recipes---billion-scale cross-encoders, mixture-of-experts (MoE) backbones, and distillation against strong teachers---have outpaced the training infrastructure available to most academic groups. Existing Tevatron reranker training relies on the Hugging Face Trainer with DeepSpeed or PyTorch FSDP1, but these backends lack efficient support for large-scale MoE training. We present Tevatron 3.0, which integrates a Megatron-Core training backend into Tevatron while preserving its data pipeline, evaluation workflow, and Hugging Face-compatible checkpoints. We benchmark existing distributed training configurations against the new backend, showing that Megatron matches FSDP reranker quality and training efficiency under comparable data-parallel settings, is up to 22% faster in the recommended single-node configuration, and supports both LoRA and full-parameter fine-tuning. Crucially, expert parallelism enables training a 30B-parameter Qwen3-30B-A3B MoE reranker, which is infeasible with PyTorch FSDP1. Using this framework, we conduct a controlled comparison of MoE versus dense models, LoRA versus full-parameter tuning, and distillation versus contrastive training on BEIR-15 with three first-stage retrievers, and report serving throughput for Hugging Face and vLLM. We find that the MoE reranker matches dense 8B quality while activating less than half as many parameters and achieving substantially higher inference throughput. We will release the framework and trained checkpoints.",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Modern reranking recipes---billion-scale cross-encoders, mixture-of-experts (MoE) backbones, and distillation against strong teachers---have outpaced the training infrastructure av",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "xu2026_tevatron",
+      "id": "arxiv:2608.00916v1",
+      "arxiv_id": "2608.00916v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.00916v1"
+    }
+  ],
+  "push_sequence": 2
+}
