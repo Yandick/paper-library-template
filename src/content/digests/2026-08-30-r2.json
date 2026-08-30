@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-30",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "MACS: A Hybrid Multi-Agent Framework for Reliable Conversational E-Commerce Recommendation",
+      "authors": "Huang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Conversational recommendation for e-commerce is increasingly mediated by large language models (LLMs), yet many real-world deployments operate under a stricter requirement: recommendations must be drawn only from a merchant's fixed catalog, without web search or unsupported product claims. In this setting, the main challenge is reliability under hard constraints: the system must satisfy user requirements, remain grounded in available inventory, and preserve preferences across multiple conversational turns. We present MACS (Multi-Agent Commerce System), a hybrid multi-agent framework for reliable conversational recommendation in fixed-catalog settings. MACS uses LLMs for language-facing tasks such as interpreting user requests, eliciting preferences, and generating responses, while correctness-critical operations, including product retrieval, hard-constraint filtering, brand exclusion, and progressive relaxation, are executed deterministically by the merchant agent. A session-persistent preference layer tracks constraints across turns, enabling consistent handling of budget overwrites and exclusion reversals. On a 140-query single-turn benchmark, MACS achieves the highest pass rate (87.1%) and perfect brand compliance (1.000). On a 10-scenario multi-turn benchmark, MACS achieves the strongest macro Pass@5 (72% vs. 56% GPT+Catalog / 52% Gemini+Catalog) with zero constraint drift. The advantage is sharpest on exclusion reversal (100% vs. 20% / 0%) and constraint accumulation (100% vs. 60% / 40%). Mean judged response quality is similar across systems (0.751 vs. 0.736). These results suggest that hybrid architectures combining deterministic constraint enforcement with session-persistent preference tracking provide stronger reliability-oriented performance than catalog-bound prompt-only baselines in the fixed-catalog merchant setting.",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Conversational recommendation for e-commerce is increasingly mediated by large language models (LLMs), yet many real-world deployments operate under a stricter requirement: recomme",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "huang2026_macs",
+      "id": "arxiv:2608.14068v1",
+      "arxiv_id": "2608.14068v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.14068v1"
+    },
+    {
+      "index": 2,
+      "title": "Shape Your Feed: An LLM-based Agentic System for Conversational Recommendation",
+      "authors": "Xu et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Industrial recommendation systems predominantly adopt a passive ranking paradigm that infers user preferences from implicit behavioral signals (e.g., clicks, dwell time) rather than explicit, natural language inputs. As a result, users experience a persistent discrepancy between their explicit interests and what passive behavioral algorithms deliver, limiting their ability to express nuanced preferences or steer their feed in real time. To address this growing gap between how recommendations are optimized and how users wish to articulate their interests, we present Shape Your Feed (SYF), an LLM-based agentic recommendation framework that enables real-time, multimodal co-curation of content. SYF employs a three-tier architecture: (i) a Perception Flow that captures fine-grained user intent from text prompts, voice commands, and UI interactions; (ii) a Serving Flow that performs real-time agentic re-ranking and pruning of candidate items, grounded in a persistent Semantic Profile encoding evolving user preferences; and (iii) a Self-Evolution Flow that aligns system behavior with human judgments via Direct Preference Optimization (DPO) and an LLM-as-a-Judge ensemble. Offline evaluations show that SYF's alignment scoring module achieves 98.85% accuracy, substantially improving over strong few-shot baselines. Large-scale online A/B experiments on production traffic further demonstrate that SYF improves feed relevance and user sentiment, indicating a practical and scalable path toward interactive, user-steerable recommendation in industrial settings.",
+      "categories": [
+        "cs.AI"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Industrial recommendation systems predominantly adopt a passive ranking paradigm that infers user preferences from implicit behavioral signals (e.g., clicks, dwell time) rather tha",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "xu2026_shape",
+      "id": "arxiv:2608.06632v1",
+      "arxiv_id": "2608.06632v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.06632v1"
+    }
+  ],
+  "push_sequence": 2
+}
