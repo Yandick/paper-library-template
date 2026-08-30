@@ -1,0 +1,68 @@
+{
+  "date": "2026-08-30",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "Seeing and Reflecting: Multimodal Memory-Enhanced Agent Collaboration for Recommendation",
+      "authors": "Cong et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large language model (LLM)-based agentic recommender systems show promise in modeling user preferences through natural-language reasoning, yet they remain limited by text-centric inputs and coarse-grained memory updates, making agents prone to missing visual evidence, semantic noise, and preference drift. To address these limitations, we propose MMEACR, a Multimodal Memory-Enhanced Agent Collaboration framework for recommendation. MMEACR introduces a dual-track memory architecture that separates interpretable agent reasoning from fine-grained multimodal matching. In the reasoning track, collaborative User and Item Memory Agents maintain persistent multimodal memories and update them through an attribute-guided reinforcement-and-reflection mechanism. In the matching track, a decoupled multi-modal embedding memory is built from raw interaction narratives and item images to preserve detailed cross-modal signals beyond structured memory updates. The two tracks are integrated through weighted Reciprocal Rank Fusion to produce robust and interpretable rankings. Experiments on three real-world domains show that MMEACR achieves strong overall performance against competitive LLM-based and agent-based baselines, with notable gains in visually grounded recommendation scenarios.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large language model (LLM)-based agentic recommender systems show promise in modeling user preferences through natural-language reasoning, yet they remain limited by text-centric i",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "cong2026_seeing",
+      "id": "arxiv:2607.07108v1",
+      "arxiv_id": "2607.07108v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.07108v1"
+    },
+    {
+      "index": 2,
+      "title": "Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems",
+      "authors": "Lin et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive systems that can reason, plan, and act. This survey provides a comprehensive overview of this emerging landscape by introducing a unified taxonomy grounded in the level of autonomy and three core paradigms of agentic recommender systems: agent-assisted recommendation, agent-as-recommender, and agent-as-user-simulator. The autonomy framework organizes existing methods along increasing capabilities in proactivity, context awareness, interaction flexibility, and adaptivity. Building on this framework, the survey analyzes how each paradigm adopts different agentic architectures and how agents enhance key components such as profiles, memory, tool use, workflows, and optimization mechanisms. We further examine evaluation methodologies for agentic recommendation, covering automated metrics, LLM-based judging, and simulation-based assessment, and discuss their limitations in capturing reasoning quality, user experience, and system behavior. Beyond existing evaluation protocols, we further discuss unresolved issues in evaluating agentic recommender systems, including trajectory-level assessment, agent contribution analysis, and calibration of user simulation. Lastly, the survey outlines open challenges in lifelong user modeling, contextual abstraction, multimodal alignment, controllability, trustworthiness, privacy, scalability, and efficiency. Together, these analyses establish a unified foundation for understanding the current progress of agentic recommender systems and highlight promising opportunities for developing more autonomous, reliable, and human-aligned recommendation agents.",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive system",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "lin2026_autonomous",
+      "id": "arxiv:2607.04433v1",
+      "arxiv_id": "2607.04433v1",
+      "open_access_url": "https://arxiv.org/pdf/2607.04433v1"
+    }
+  ],
+  "push_sequence": 5
+}
