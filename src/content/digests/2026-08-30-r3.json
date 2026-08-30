@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-30",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "LLM-Based Re-Ranking for Real Estate Search",
+      "authors": "Ntimane et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "QuintoAndar Group operates the leading housing marketplace in Latin America for both rentals and sales. The platform replaces traditionally paper-heavy workflows with a fully digital experience, making housing transactions faster and more accessible to tenants, buyers, and landlords in the region. Finding the ideal home in such a vast catalog is inherently difficult. At the same time, the widespread adoption of conversational assistants is reshaping user expectations: people increasingly want to express their needs through open, multi-turn dialog rather than rigid filter menus and faceted search. This shift is particularly pronounced in housing, where intent is multi-dimensional, context-dependent, and rarely reducible to a small set of structured constraints. To meet these expectations, we propose a Large Language Model (LLM) based re-ranker that augments a conversational recommendation system by reordering retrieved candidates according to the nuanced, context-rich intent expressed across the user's conversation. We additionally construct a large-scale offline evaluation dataset for conversational real-estate search, containing 960,000 query-item pairs constructed from both synthetic and production queries and annotated using an LLM-as-a-Judge framework with human validation. We validate our approach both offline, on this proprietary dataset, and online, through a production A/B test. Both evaluations show consistent improvements in ranking quality, including a statistically significant increase in production of +5.3% in click-through rate and +4.8% in scheduled visits, demonstrating the value of integrating conversational context into housing recommendations.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "QuintoAndar Group operates the leading housing marketplace in Latin America for both rentals and sales. The platform replaces traditionally paper-heavy workflows with a fully digit",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "ntimane2026_llm",
+      "id": "arxiv:2607.14835v2",
+      "arxiv_id": "2607.14835v2",
+      "open_access_url": "https://arxiv.org/pdf/2607.14835v2"
+    },
+    {
+      "index": 2,
+      "title": "MetaStrategy: Generative Ranking with Executable LLM Strategies",
+      "authors": "Lai et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Industrial recommender systems rank heterogeneous content under coupled user, business, commercial, and experience objectives. Existing generative ranking methods typically construct item sequences directly, making them difficult to integrate with mature predictive models, operational rules, and field-level guardrails. We present MetaStrategy, a framework that instead generates a structured, executable ranking strategy. Conditioned on request context, a large language model (LLM) policy emits a typed JSON bundle controlling objective weights, content and category preferences, experience constraints, and position policies. A deterministic validator and compiler instantiate an isolated Generator that competes atomically with incumbents under the list-level Evaluator of the Generator-Evaluator (GE) architecture. We train the policy in a production-path replay environment that re-executes logged requests through the current re-ranking stack without user exposure. The method combines selection, relative-rank, and baseline-lift rewards, a self-competitive curriculum that feeds frequent strategies back as competitors, and Evaluator-routed reward-augmented on-policy distillation that transfers complementary 4B-parameter Teachers into a compact 0.8B-parameter Student. We deploy MetaStrategy in Taobao Homepage Guess You Like through diff-triggered nearline generation; LLM inference remains outside synchronous ranking, with no observable increase in response time (RT). In a seven-day user-randomized online A/B test, MetaStrategy wins 27.93% of treatment-side GE calls and significantly improves click page views (click PV) by 2.11%, item-detail page views (IPV) by 3.12%, and transaction amount by 2.83%.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Industrial recommender systems rank heterogeneous content under coupled user, business, commercial, and experience objectives. Existing generative ranking methods typically constru",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "lai2026_metastrategy",
+      "id": "arxiv:2608.09440v1",
+      "arxiv_id": "2608.09440v1",
+      "open_access_url": "https://arxiv.org/pdf/2608.09440v1"
+    }
+  ],
+  "push_sequence": 3
+}
