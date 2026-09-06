@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-06",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "CORAL: An LLM-Native Harness for Production Recommender Systems",
+      "authors": "Azhar et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Production recommender systems shape what billions of people see, and sustaining their performance requires continual optimization: as content, user behavior, and upstream models shift, the choices governing retrieval, ranking, and serving must be revisited. Traditionally, human engineers test such changes through online experiments--a slow, reactive process limited by engineering effort, leaving parts of the system unrevised as conditions change. Although large language models have been applied to ranking, user modeling, and offline model development, few systems place an agent in a continual closed loop that acts on a live recommender and learns from the measured effects of its decisions. We present CORAL (Constraint-Optimized Recommender via an Agentic Loop), an LLM-native harness that closes this loop: each cycle, the agent observes operating signals, reasons over a memory of past decisions and outcomes, and invokes tools--including a numerical optimizer that keeps changes within a fixed operating budget--to reconfigure the recommender, with measured outcomes informing the next cycle. We formulate this as a partially observed, non-stationary, constrained optimization problem in which the policy improves in context, without parameter updates, from its prior actions. Across two large-scale social platforms, evaluated with A/B experiments, the same harness improves engagement at no additional serving cost on one and reduces serving cost without degrading engagement on the other, spanning the engagement-efficiency frontier. Performance improves as the loop iterates, suggesting that a single agentic loop can automate continual optimization work traditionally performed by human algorithm engineers under explicit guardrails.",
+      "categories": [
+        "cs.CL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Production recommender systems shape what billions of people see, and sustaining their performance requires continual optimization: as content, user behavior, and upstream models s",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "azhar2026_coral",
+      "id": "arxiv:2609.02730v1",
+      "arxiv_id": "2609.02730v1",
+      "open_access_url": "https://arxiv.org/pdf/2609.02730v1"
+    },
+    {
+      "index": 2,
+      "title": "GenCAR: Generative Counterfactual Alignment with Risk-Controlled Selection for Out-of-Distribution Recommendation",
+      "authors": "Wang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Serving useful recommendations under distribution shift is crucial for balancing utility and risk in out-of-distribution (OOD) recommendation. However, most existing OOD methods improve ranking or construct counterfactual candidates without controlling the proxy-label false discovery rate (FDR) of the served set. In this work, we formulate OOD serving as the $α$-Valid Counterfactual Recommendation ($α$-VCR) problem to retain candidate support learned from counterfactual supervision while controlling proxy-label FDR, and propose GenCAR, which couples preference-grounded counterfactual supervision with calibrated set selection. In particular, GenCAR fixes the stable-preference representation while intervening on the environmental factor, grounds offline large language model proposals through preference anchors and trust-radius filtering, and uses conformal $p$-values for Benjamini--Hochberg selection. We theoretically bound conditional counterfactual approximation error and prove finite-sample, distribution-free control of proxy-label FDR under exchangeability and positive regression dependence, with a Benjamini--Yekutieli guarantee under arbitrary dependence. Extensive experiments audit realized proxy false discovery proportions and demonstrate that GenCAR consistently enhances OOD candidate recovery across diverse benchmarks.",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Serving useful recommendations under distribution shift is crucial for balancing utility and risk in out-of-distribution (OOD) recommendation. However, most existing OOD methods im",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "wang2026_gencar",
+      "id": "arxiv:2609.02162v1",
+      "arxiv_id": "2609.02162v1",
+      "open_access_url": "https://arxiv.org/pdf/2609.02162v1"
+    }
+  ],
+  "push_sequence": 2
+}
