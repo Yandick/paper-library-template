@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-06",
+  "paper_count": 2,
+  "papers": [
+    {
+      "index": 1,
+      "title": "The Dice Roll Method: A Standardized Protocol for Repeated-Query Auditing of Large Language Model Brand Recommendations",
+      "authors": "Dmitrij Żatuchin",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Background: Researchers increasingly use repeated identical prompts to audit stochastic variation in large language model (LLM) brand recommendations, yet no standardized protocol exists for setting iteration counts, selecting stability metrics, or establishing reliability thresholds. Objective: We formalize the Dice Roll Method as a reusable protocol for repeated-query auditing of LLM brand recommendations, grounded in a generative model of temperature-scaled nucleus sampling. Methods: Total response variance is decomposed into sampling, prompt-phrasing, run-to-run, and model-version components. The stack: a negative-binomial mixed model with iterations as repeated measures; Cliff's delta as the distribution-free effect size; dependence-preserving bootstrap; simulation-based power; a generalizability-theory decomposition; drift diagnostics on pinned snapshots. We reanalyse five brand-recommendation auditing studies: approximately 190,000 observations, 270+ brands, 6 languages, iteration counts 5 to 40. Results: Three tiers of iteration guidance emerge from the D-study: exploratory (n = 5, G = 0.58), confirmatory (n = 10, G = 0.74), and rigorous (n = 15, G = 0.81), tied to effect-size and generalizability targets. The four metric families (count, set, embedding, fairness-adjusted PASOR) are complementary, motivating a compact metric battery over single indicators. A pre-registered external validation on three independent corpora (Motoki et al., 100-round; Rozado, 24 models; llm-stability) reproduces the D-study reliability prediction in 37 of 39 cells with no failures and the n = 5 power value to two decimals; the fixed tiers do not transfer, supporting a pilot-then-solve reading. Conclusion: The protocol gives repeated-query auditing of LLM brand recommendations a statistically principled footing under the conditional, non-Gaussian structure of real autoregressive generation.",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Background: Researchers increasingly use repeated identical prompts to audit stochastic variation in large language model (LLM) brand recommendations, yet no standardized protocol ",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "atuchin2026_dice",
+      "id": "arxiv:2609.04047v1",
+      "arxiv_id": "2609.04047v1",
+      "open_access_url": "https://arxiv.org/pdf/2609.04047v1"
+    },
+    {
+      "index": 2,
+      "title": "SelfDR: Self-Distillation from Reasoning for LLM-Based Recommendation",
+      "authors": "Jiang et al.",
+      "year": 2026,
+      "journal": "",
+      "doi": "",
+      "abstract": "Large Language Models (LLMs) have recently emerged as powerful backbones for recommendation. To better elicit their capabilities, reasoning has been widely incorporated to help LLMs interpret rich textual signals and improve recommendation accuracy. However, explicitly generating intermediate reasoning traces often incurs substantial computational costs, which limits practical deployment in real-world recommender systems. To address this challenge, we propose SelfDR, a Self-Distillation from Reasoning framework for LLM-based Recommendation. SelfDR distills an LLM's own reasoning-enhanced predictions to produce recommendations directly, improving recommendation effectiveness while maintaining inference efficiency. All components in the framework are built on the same base LLM, without relying on any external models. Specifically, the teacher recommender is constructed by training a reasoner with downstream performance as the reward, enabling it to generate targeted rationales that are later incorporated into the teacher's input. A student recommender for direct recommendation, with the same underlying model, then learns from the teacher through self-distillation with a dynamic weighting strategy. Extensive experiments on three public datasets validate the effectiveness, rationality, and efficiency of SelfDR. Codes are available at https://github.com/JiangDeccc/SelfDistillation.",
+      "categories": [
+        "cs.IR"
+      ],
+      "source": "arxiv",
+      "jcr_quartile": "",
+      "cas_zone": "",
+      "impact_factor": "",
+      "topic_tags": [
+        "llm-recommendation-ir"
+      ],
+      "tldr": "Large Language Models (LLMs) have recently emerged as powerful backbones for recommendation. To better elicit their capabilities, reasoning has been widely incorporated to help LLM",
+      "background": "",
+      "method": "",
+      "results": "",
+      "innovation": "",
+      "inspiration": "",
+      "relevance_note": "Auto-selected by relevance, recency, and recommendation fit.",
+      "citekey": "jiang2026_selfdr",
+      "id": "arxiv:2609.03313v1",
+      "arxiv_id": "2609.03313v1",
+      "open_access_url": "https://arxiv.org/pdf/2609.03313v1"
+    }
+  ],
+  "push_sequence": 1
+}
